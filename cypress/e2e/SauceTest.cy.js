@@ -49,6 +49,7 @@ describe("End to End test", () => {
 
         cy.get(".complete-header").then(($el) => {
             const msg = $el.text();
+            console.log(msg);
             expect(msg).to.equal(succssmsg);
         })
 
