@@ -1,0 +1,10 @@
+package POJO;
+
+public class EsCommentAdc {
+
+
+    private String ADC_NUMBER;
+    private String ADC_STARTDATE;
+    private String ADC_ENDDATE;
+    private String DEL_FLAG;
+}

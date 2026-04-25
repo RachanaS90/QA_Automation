@@ -1,0 +1,82 @@
+package AutomationExcercise;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Productpage extends Basepage{
+
+	public Productpage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(css="a[href='/products']")
+	WebElement products_link;
+	
+	@FindBy(xpath="//h2[contains(text(),'All Products')]")
+	WebElement product_text;
+	
+	@FindBy(id="search_product")
+	WebElement search_textbox;
+	
+	@FindBy(id="submit_search")
+	WebElement search_btn;
+	
+	@FindBy(xpath="//h2[contains(text(),'Searched Products')]")
+	WebElement product_title;
+	
+	@FindBy(css=".product-image-wrapper")
+	List<WebElement> product_tile;
+	
+	
+	String searchedproductname= "Tshirt";
+	
+	
+	public void handleAdvertisementPopup() {
+	    try {
+	        // Locate the close button of the ad popup
+	        WebElement closeBtn = driver.findElement(By.id("dismiss-button-element"));
+	        closeBtn.click();
+	        System.out.println("Advertisement popup closed");
+	    } catch (NoSuchElementException e) {
+	        System.out.println("No advertisement popup appeared");
+	    }
+	}
+	
+	public String getProductPage()
+	{
+		products_link.click();
+		handleAdvertisementPopup();
+		return visibilityOf(product_text).getText();
+	}
+	
+	public String searchProduct()
+	{
+		search_textbox.sendKeys(searchedproductname);
+		search_btn.click();
+		return product_title.getText();
+	}
+	
+	public void verifySearchedResult(String searchTerm)
+	{
+		 String normalizedSearchTerm = searchTerm.toLowerCase().replaceAll("[-\\s]", "");
+
+	        for (WebElement productCard : product_tile) {
+	            // Extract product name text
+	            String productName = productCard.findElement(By.cssSelector(".productinfo p"))
+	                                            .getText()
+	                                            .toLowerCase()
+	                                            .replaceAll("[-\\s]", "");
+
+	            System.out.println("Product: " + productName);
+	}
+	}
+
+}

@@ -1,0 +1,22 @@
+package AutomationExcercise;
+
+import org.testng.annotations.Test;
+
+public class Hometest extends Basetest{
+
+	@Test(dataProvider = "existingData", priority = 0)
+	public void verifyTestCasesLink(String email, String password)
+	{
+		loginpage.checkLogin(email, password);
+		Homepage homepage = new Homepage(driver);
+		homepage.getTestCases();
+	}
+	
+	@Test(dataProvider = "existingData", priority = 1)
+	public void verifyProductLink(String email, String password)
+	{
+		loginpage.checkLogin(email, password);
+		Homepage homepage = new Homepage(driver);
+	    homepage.getProducts();
+	}
+}

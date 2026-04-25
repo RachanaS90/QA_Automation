@@ -1,0 +1,47 @@
+package AutomationExcercise;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Producttest extends Logintest{
+
+	Productpage productpage;
+	@Test
+	public void verifyAllProductsPage(String email, String password)
+	{
+		verifyLogin(email, password);
+		productpage = new Productpage(driver);
+		String actualtext = productpage.getProductPage();
+		Assert.assertTrue(actualtext.contains(expectedproducttext));
+	}
+	
+	@Test
+	public void searchProduct()
+	{
+		verifyAllProductsPage();
+	    productpage.searchProduct();
+	    String actualsearchedproducttitle = productpage.product_title.getText();
+	    Assert.assertEquals(actualsearchedproducttitle, expectedsearchproducttitle);
+		Assert.assertTrue(productpage.verifySearchedResult("TShirt"),
+		        "Not all products matched the search term: " + productName);
+	}
+	
+	@Test
+	public void verifyClickProductByName() {
+		verifyAllProductsPage();
+	    productpage.clickProductByName("Men Tshirt"); 
+	}
+	
+	@Test
+	public void verifyProductAddedToCart()
+	{
+		verifyClickProductByName();
+		String actualmessage = productpage.addProductByName();
+		Assert.assertTrue(actualmessage.contains("Added!"));
+	}
+	
+	
+	
+	
+	
+}

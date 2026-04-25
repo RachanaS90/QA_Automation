@@ -1,0 +1,52 @@
+package AutomationExcercise;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Homepage extends Basepage{
+
+	WebDriver driver;
+	Productpage productpage;
+	
+	public Homepage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(css="a[href='/test_cases']")
+	WebElement testcases_link;
+	
+	@FindBy(xpath="//b[contains(text(),'Test Cases')]")
+	WebElement testcase_title;
+	
+	@FindBy(css = "a[href='/products']")
+	WebElement products_link;
+	
+	public String getTestCases()
+	{
+		testcases_link.click();
+		return testcase_title.getText();
+	}
+	
+	public Productpage getProducts()
+	{
+		products_link.click();
+		return new Productpage(driver);
+	}
+	
+	/*public String getProductPage() {
+		try {
+			handleAdvertisementPopup();
+		} catch (Exception e) {
+			System.out.println("No advertisement popup appeared");
+			getProducts();
+		}
+		return visibilityOf(product_text).getText();
+	}*/
+		
+
+	
+}

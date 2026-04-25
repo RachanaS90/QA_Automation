@@ -1,0 +1,151 @@
+package AutomationExcercise;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Productpage extends Basepage{
+
+	public Productpage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(css="a[href='/products']")
+	WebElement products_link;
+	
+	@FindBy(xpath="//h2[contains(text(),'All Products')]")
+	WebElement product_text;
+	
+	@FindBy(id="search_product")
+	WebElement search_textbox;
+	
+	@FindBy(id="submit_search")
+	WebElement search_btn;
+	
+	@FindBy(xpath="//h2[contains(text(),'Searched Products')]")
+	WebElement product_title;
+	
+	@FindBy(css=".product-image-wrapper")
+	List<WebElement> product_tile;
+	
+	@FindBy(css=".cart")
+	WebElement productdetails_addtocartbtn;
+	
+	@FindBy(xpath="//h4[contains(text(),'Added!')]")
+	WebElement success_product_added;
+	
+	@FindBy(css="input[id='quantity']")
+	WebElement product_qty;
+	
+	
+	
+	
+	
+	String searchedproductname= "Tshirt";
+	
+	
+	public void handleAdvertisementPopup() {
+	    try {
+	        // Locate the close button of the ad popup
+	        WebElement closeBtn = driver.findElement(By.id("dismiss-button-element"));
+	        closeBtn.click();
+	        System.out.println("Advertisement popup closed");
+	    } catch (NoSuchElementException e) {
+	        System.out.println("No advertisement popup appeared");
+	    }
+	}
+	
+	public String getProductPage()
+	{
+		handleAdvertisementPopup();
+		elementToBeClickable(products_link).click();
+		return visibilityOf(product_text).getText();
+	}
+	
+	public String searchProduct()
+	{
+		elementToBeClickable(search_textbox).sendKeys(searchedproductname);
+		elementToBeClickable(search_btn).click();
+		return product_title.getText();
+	}
+	
+	public boolean verifySearchedResult(String searchTerm)
+	{
+		 String normalizedSearchTerm = searchTerm.toLowerCase().replaceAll("[-\\s]", "");
+
+	        for (WebElement productCard : product_tile) {
+	            // Extract product name text
+	            String productName = productCard.findElement(By.cssSelector(".productinfo p"))
+	                                            .getText()
+	                                            .toLowerCase()
+	                                            .replaceAll("[-\\s]", "");
+
+	            System.out.println("Product: " + productName);
+	            
+	            System.out.println("SearchTerm: " + normalizedSearchTerm);
+	            System.out.println("ProductName: " + productName);
+	            if (!productName.contains(normalizedSearchTerm)) {
+	                return false;
+	            }
+	}
+	        return true;       
+	}
+	
+	
+	 public void clickProductByName(String productName) {
+	        for (int i = 0; i < product_tile.size(); i++) {
+	            WebElement card = visibilityOfAllElements(product_tile).get(i);
+
+	            // Grab the product name text from child <p>
+	            String name = card.findElement(By.cssSelector(".productinfo p")).getText();
+	            System.out.println("Product " + (i + 1) + ": " + name);
+
+	            // Compare with target product name
+	            if (name.equalsIgnoreCase(productName)) {
+	                // Click the product details link inside this card
+	            	try {
+	            		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+	                    wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("aswift_3"));
+	            	}
+	            	try {
+	                    WebElement closeBtn = driver.findElement(By.cssSelector("div[title='Close']"));
+	                    closeBtn.click();
+	                    System.out.println("Ad closed successfully.");
+	                } catch (NoSuchElementException e) {
+	                    System.out.println("No close button found in ad iframe.");
+	                }
+
+	                driver.switchTo().defaultContent();
+	            } catch (TimeoutException e) {
+	                System.out.println("Ad iframe not present, proceeding with click.");
+	                driver.switchTo().defaultContent();
+	            }
+	                card.findElement(By.cssSelector("a[href*='/product_details']")).click();
+	                break; // stop after clicking the match
+	            }
+	        }
+	        
+	    }
+	 
+	 
+		public String addProductByName()
+	 {
+		    product_qty.clear();
+	        product_qty.sendKeys("2");
+	        productdetails_addtocartbtn.click();
+            return visibilityOf(success_product_added).getText();
+	 }
+	
+	
+
+}

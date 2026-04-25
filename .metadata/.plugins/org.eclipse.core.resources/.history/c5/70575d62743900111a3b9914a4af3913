@@ -1,0 +1,20 @@
+package AutomationExcercise;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Carttest extends Producttest{
+
+	@Test
+	public void verifyCartDescription()
+	{
+		verifyProductAddedToCart();
+		Cartpage cartpage=new Cartpage(driver);
+		Cartitem item = cartpage.checkViewCartLink();
+		Assert.assertTrue(item.getName().contains(productName));
+	    Assert.assertEquals(item.getQuantity(), "2");
+	    Assert.assertEquals(item.getPrice(), "$20");   // example expected
+	    Assert.assertEquals(item.getTotal(), "$40"); 
+		
+	}
+}

@@ -1,0 +1,27 @@
+package PHPAPI.FACEAPI;
+
+import POJO.Root;
+import io.restassured.RestAssured;
+
+import static io.restassured.RestAssured.given;
+
+public class GetWoodDetails {
+	
+	public void getWoodDetails(long order_id)
+	{
+		 RestAssured.baseURI="https://apimgr.int.sgdbf.saint-gobain.net:20015/SAP/zsgdbf01/apimgt/v1";
+			
+		 given()
+		    .relaxedHTTPSValidation()
+		    .header("KeyId", "ee0524ab-e37b-4186-b953-ac785e1e6802")
+		    .accept("application/json")
+		    .queryParam("iv_get_docflow", false)
+		    .queryParam("iv_get_docflow_mobile", true)
+		.when()
+		    .get("/billings/" + order_id)
+		.then()
+		    .statusCode(200)
+		    .extract()
+		    .body().as(Root.class);
+		 }
+}

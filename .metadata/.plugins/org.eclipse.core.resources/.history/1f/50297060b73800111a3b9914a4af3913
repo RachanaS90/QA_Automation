@@ -1,0 +1,12 @@
+package AutomationExcercise;
+
+import org.testng.annotations.Test;
+
+public class Hometest extends Loigntest{
+
+	@Test
+	public void verifyTestCasesLink()
+	{
+		
+	}
+}

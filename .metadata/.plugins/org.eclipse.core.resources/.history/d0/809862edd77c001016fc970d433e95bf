@@ -1,0 +1,18 @@
+package POJO;
+import java.util.List;
+
+public class Root {
+	    
+	    private List<GetWoodArticles> ET_COLIS;
+	    private EsCommentAdc ES_COMMENT_ADC;
+	    private EsFfginstPart ES_FFGINST_PART;
+	    private EsHeader ES_HEADER;
+
+	    public List<GetWoodArticles> getET_COLIS() {
+	        return ET_COLIS;
+	    }
+
+	    public void setET_COLIS(List<GetWoodArticles> ET_COLIS) {
+	        this.ET_COLIS = ET_COLIS;
+	    }
+}

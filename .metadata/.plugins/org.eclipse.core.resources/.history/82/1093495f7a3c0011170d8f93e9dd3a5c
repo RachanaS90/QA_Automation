@@ -1,0 +1,84 @@
+package AutomationExcercise;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Cartpage extends Basepage {
+
+	WebDriver driver; 
+	Productpage productpage;
+	
+	public Cartpage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	@FindBy(css=".cart_description a")
+	WebElement product_description;
+	
+	@FindBy(css=".cart_price p")
+	WebElement product_price;
+
+	@FindBy(css=".cart_quantity button")
+	WebElement product_qty;
+
+	@FindBy(css=".cart_total p")
+	WebElement product_total;
+	
+	@FindBy(css=".check_out")
+	WebElement checkout_link;
+	
+	@FindBy(css="a[href='/payment']")
+	WebElement placeorderbtn;
+	
+	@FindBy(css="input[data-qa='name-on-card']")
+	WebElement card_name;
+	
+	@FindBy(css="input[data-qa='card-number']")
+	WebElement card_number;
+	
+	@FindBy(css="input[data-qa='cvc']")
+	WebElement cvc;
+	
+	@FindBy(css="input[data-qa='expiry-month']")
+	WebElement expiry_month;
+	
+	@FindBy(css="input[data-qa='expiry-year']")
+	WebElement expiry_year;
+	
+	@FindBy(id="submit")
+	WebElement pay_confirm_order;
+	
+	@FindBy(css="h2[data-qa='order-placed']")
+	WebElement order_success_message;
+	
+	
+	public Cartitem checkViewCartLink()
+	{
+		String name = product_description.getText();
+	    String price = product_price.getText();
+	    String qty = product_qty.getText();
+	    String total = product_total.getText();
+
+	    return new Cartitem(name,price,qty,total);
+	}
+	
+	public String checkProceedToCheckout()
+	{
+		checkout_link.click();
+		placeorderbtn.click();
+		card_name.sendKeys("Rachana");
+		card_number.sendKeys("9078907867899078");
+		cvc.sendKeys("888");
+		expiry_month.sendKeys("09");
+		expiry_year.sendKeys("2035");
+		pay_confirm_order.click();
+		return order_success_message.getText();
+	}
+	
+
+}

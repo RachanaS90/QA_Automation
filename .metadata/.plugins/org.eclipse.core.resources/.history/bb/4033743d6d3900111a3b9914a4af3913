@@ -1,0 +1,16 @@
+package AutomationExcercise;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class Cartpage extends Basepage {
+
+	WebDriver driver; 
+	
+	public Cartpage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+}

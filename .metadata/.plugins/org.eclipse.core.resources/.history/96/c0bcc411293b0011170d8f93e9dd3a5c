@@ -1,0 +1,14 @@
+package AutomationExcercise;
+
+import org.testng.annotations.Test;
+
+public class Hometest extends Logintest{
+
+	@Test(dataProvider = "existingData", priority = 0)
+	public void verifyTestCasesLink(String email, String password)
+	{
+		verifyLogin(email, password);
+		Homepage homepage = new Homepage(driver);
+		homepage.getTestCases();
+	}
+}

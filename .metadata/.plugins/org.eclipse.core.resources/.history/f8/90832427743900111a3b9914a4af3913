@@ -1,0 +1,16 @@
+package AutomationExcercise;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Carttest extends Producttest{
+
+	@Test
+	public void verifyCartDescription()
+	{
+		verifyProductAddedToCart();
+		Cartpage cartpage=new Cartpage(driver);
+		String actualdescription = cartpage.checkViewCartLink();
+		Assert.assertTrue(actualdescription.contains(productName));
+	}
+}

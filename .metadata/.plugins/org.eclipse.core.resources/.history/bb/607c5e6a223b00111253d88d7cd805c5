@@ -1,0 +1,47 @@
+package AutomationExcercise;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Basetest {
+
+	WebDriver driver;
+	String expectedtitle = "Automation Exercise";
+	String expectederrormessage = "Email Address already exist!";
+	String expectedtext = "Logged in as";
+	String expecteddeletemessage = "ACCOUNT DELETED!";
+	String expectedinvaliderrormessage = "Your email or password is incorrect!";
+	String expectedproducttext = "ALL PRODUCTS";
+	String expectedsearchproducttitle = "SEARCHED PRODUCTS";
+	String productName = "Men Tshirt";
+	String expectedorderplacedmessage = "ORDER PLACED!";
+	
+	public WebDriver initializeDriver()
+	{
+	 WebDriverManager.chromedriver().setup();
+	 
+	// Configure ChromeOptions for incognito mode
+	 ChromeOptions options = new ChromeOptions();
+	 options.addArguments("--incognito");
+	 
+	 driver = new ChromeDriver(options);
+	 driver.manage().window().maximize();
+	 driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
+	 return driver;
+	}
+	
+	public Loginpage goToURL()
+	{
+		initializeDriver();
+		driver.get("https://automationexercise.com");
+		return new Loginpage(driver);
+	}
+	
+	
+	}
+	

@@ -1,0 +1,65 @@
+package AutomationExcercise;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Cartpage extends Basepage {
+
+	WebDriver driver; 
+	
+	public Cartpage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//u[contains(text(),'View Cart')]")
+	WebElement viewcart_link;
+	
+	@FindBy(css=".cart_description a")
+	WebElement product_description;
+	
+	@FindBy(css=".cart_price p")
+	WebElement product_price;
+
+	@FindBy(css=".cart_quantity button")
+	WebElement product_qty;
+
+	@FindBy(css=".cart_total p")
+	WebElement product_total;
+	
+	@FindBy(css=".check_out")
+	WebElement checkout_link;
+	
+	@FindBy(css="a[href='/payment']")
+	WebElement placeorderbtn;
+	
+	@FindBy(css="input[data-qa='name-on-card']")
+	WebElement card_name;
+	
+	@FindBy(css="input[data-qa='card-number']")
+	WebElement card_number;
+	
+	
+	
+	public Cartitem checkViewCartLink()
+	{
+		elementToBeClickable(viewcart_link).click();
+		String name = product_description.getText();
+	    String price = product_price.getText();
+	    String qty = product_qty.getText();
+	    String total = product_total.getText();
+
+	    return new Cartitem(name,price,qty,total);
+	}
+	
+	public void checkProceedToCheckout()
+	{
+		checkout_link.click();
+		placeorderbtn.click();
+	}
+	
+
+}

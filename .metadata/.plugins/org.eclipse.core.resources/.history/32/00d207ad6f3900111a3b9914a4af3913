@@ -1,0 +1,31 @@
+package AutomationExcercise;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Cartpage extends Basepage {
+
+	WebDriver driver; 
+	
+	public Cartpage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(css="a[href='/view_cart']")
+	WebElement viewcart_link;
+	
+	@FindBy(css=".cart_description")
+	WebElement product_description;
+	
+	public void checkViewCartLink()
+	{
+		visibilityOf(viewcart_link).click();
+		product_description.getText();
+	}
+	
+
+}

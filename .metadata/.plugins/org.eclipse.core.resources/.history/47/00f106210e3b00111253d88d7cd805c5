@@ -1,0 +1,102 @@
+package AutomationExcercise;
+
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class Logintest extends Basetest{
+
+	
+	@DataProvider(name = "signupData")
+	public Object[][] signupData() {
+	    return new Object[][] {
+	        {"Rachana Sinha", "Rachana2026@gmail.com","test@123","10", "April", "1980", "India", "ACCOUNT CREATED!"}
+	    };	
+	}
+	
+	@DataProvider(name ="existingSignupData")
+	public Object[][] existingSignupData(){
+		return new Object[][] {
+			{"Rachana Sinha","RachanaNew@gmail.com"}
+		};
+	}
+	
+	@DataProvider(name ="existingData")
+	public Object[][] existingData(){
+		return new Object[][] {
+			{"Rachana2026@gmail.com","test@123"}
+		};
+	}
+	
+	@DataProvider(name ="deleteAccount")
+	public Object[][] deleteAccount(){
+		return new Object[][] {
+			{"Rachana2026@gmail.com","test@123"}
+		};
+	}
+	
+	@DataProvider(name ="invalidLoginData")
+	public Object[][] inavlidLoginData()
+	{
+		return new Object[][] {
+			{"test676777@gmail.com","test@123"}
+		};
+	}
+	
+	@Test
+	public void verifyHomepage()
+	{
+		Loginpage loginpage = goToURL();
+		String actualtitle = loginpage.getHomepageTitle();
+		Assert.assertEquals(actualtitle, expectedtitle);
+	}
+	
+	@Test(dataProvider = "signupData")
+	public void verifyUserSignUp(String username, String email, String password,String day, String month, String year, String country, String expectedMessage)
+	{
+		Loginpage loginpage = goToURL();
+		loginpage.signUp(username,email);
+		loginpage.selectCheckbox();
+		Assert.assertTrue(loginpage.newslettercheckbox.isSelected());
+		loginpage.selectDay(day);
+		loginpage.selectMonth(month);
+		loginpage.selectYear(year);
+		loginpage.selectCountry(country);
+		String actualmessage = loginpage.addDetails(password);
+		Assert.assertEquals(actualmessage, expectedMessage);
+	}
+	
+	@Test(dataProvider = "existingSignupData")
+	public void verifyExistingEmail(String username, String email)
+	{
+		Loginpage loginpage = goToURL();
+		loginpage.signUp(username,email);
+		String errormesage = loginpage.addExistingEmail();
+		Assert.assertEquals(errormesage, expectederrormessage);
+	}
+	
+	@Test(dataProvider = "existingData")
+	public void verifyLogin(String email, String password)
+	{
+		Loginpage loginpage = goToURL();
+		String actualtext = loginpage.checkLogin(email, password);
+		Assert.assertTrue(actualtext.contains(expectedtext));
+	}
+	
+	@Test(dataProvider="deleteAccount")
+	public void verifyDeleteAccount(String email, String password)
+	{
+		Loginpage loginpage = goToURL();
+		String actualdeleteaccountmessage = loginpage.checkDeleteAccount(email,password);
+		Assert.assertEquals(actualdeleteaccountmessage, expecteddeletemessage);
+	}
+	
+	@Test
+	public void verifyinvalidLogin(String invalidemail, String invalidpassword)
+	{
+		Loginpage loginpage = goToURL();
+		String actualinvaliderrormessage = loginpage.checkExistingLogin(invalidemail, invalidpassword);
+		Assert.assertEquals(actualinvaliderrormessage, expectedinvaliderrormessage);
+	}
+	
+}

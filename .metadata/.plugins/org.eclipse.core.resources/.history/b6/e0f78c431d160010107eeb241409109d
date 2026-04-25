@@ -1,0 +1,20 @@
+package POJO;
+
+public class SpecialBuildingSites {
+
+	private String buildingSiteCode;
+	public String getBuildingSiteCode() {
+		return buildingSiteCode;
+	}
+	public void setBuildingSiteCode(String buildingSiteCode) {
+		this.buildingSiteCode = buildingSiteCode;
+	}
+	public String getBuildingSiteName() {
+		return buildingSiteName;
+	}
+	public void setBuildingSiteName(String buildingSiteName) {
+		this.buildingSiteName = buildingSiteName;
+	}
+	private String buildingSiteName;
+	
+}

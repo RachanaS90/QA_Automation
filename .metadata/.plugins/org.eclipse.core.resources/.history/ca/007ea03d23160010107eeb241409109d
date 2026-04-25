@@ -1,0 +1,67 @@
+package POJO;
+
+import java.util.List;
+
+public class CriteriaCentrales {
+
+	private int centraleId;
+	private SpecialConcretes specialConcretes;
+	private String bigVolumeAlerts;
+	private List<FormulaSpecialAlerts> formulaSpecialAlerts;
+	private List<SpecialCustomer> specialCustomers;
+	private List<SpecialBuildingSites> specialBuildingSites;
+	private List<FormulaSpecialAlerts> liquidFormulas;
+	private String centraleName;
+
+		
+	
+	public int getCentraleId() {
+		return centraleId;
+	}
+	public void setCentraleId(int centraleId) {
+		this.centraleId = centraleId;
+	}
+	public SpecialConcretes getSpecialConcretes() {
+		return specialConcretes;
+	}
+	public void setSpecialConcretes(String specialConcretes) {
+		this.specialConcretes = specialConcretes;
+	}
+	public String getBigVolumeAlerts() {
+		return bigVolumeAlerts;
+	}
+	public void setBigVolumeAlerts(String bigVolumeAlerts) {
+		this.bigVolumeAlerts = bigVolumeAlerts;
+	}
+	public List<FormulaSpecialAlerts> getFormulaSpecialAlerts() {
+		return formulaSpecialAlerts;
+	}
+	public void setFormulaSpecialAlerts(List<FormulaSpecialAlerts> formulaSpecialAlerts) {
+		this.formulaSpecialAlerts = formulaSpecialAlerts;
+	}
+	public List<SpecialCustomer> getSpecialCustomers() {
+		return specialCustomers;
+	}
+	public void setSpecialCustomers(List<SpecialCustomer> specialCustomers) {
+		this.specialCustomers = specialCustomers;
+	}
+	public List<SpecialBuildingSites> getSpecialBuildingSites() {
+		return specialBuildingSites;
+	}
+	public void setSpecialBuildingSites(List<SpecialBuildingSites> specialBuildingSites) {
+		this.specialBuildingSites = specialBuildingSites;
+	}
+	public List<FormulaSpecialAlerts> getLiquidFormulas() {
+		return liquidFormulas;
+	}
+	public void setLiquidFormulas(List<FormulaSpecialAlerts> liquidFormulas) {
+		this.liquidFormulas = liquidFormulas;
+	}
+	public String getCentraleName() {
+		return centraleName;
+	}
+	public void setCentraleName(String centraleName) {
+		this.centraleName = centraleName;
+	}
+	
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-20T14:27:33 IST" name="Default suite" finished-at="2026-04-20T14:29:22 IST" duration-ms="109729">
+    <groups>
+    </groups>
+    <test started-at="2026-04-20T14:27:33 IST" name="Default test" finished-at="2026-04-20T14:29:22 IST" duration-ms="109729">
+      <class name="AutomationExcercise.Carttest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Carttest@198b6731]" started-at="2026-04-20T14:27:33 IST" name="setUp" finished-at="2026-04-20T14:27:35 IST" duration-ms="2490" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="goToURL()[pri:0, instance:AutomationExcercise.Carttest@198b6731]" started-at="2026-04-20T14:27:35 IST" name="goToURL" finished-at="2026-04-20T14:27:41 IST" duration-ms="5336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToURL -->
+        <test-method signature="verifyCartDescription(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Carttest@198b6731]" started-at="2026-04-20T14:27:41 IST" name="verifyCartDescription" data-provider="existingData" finished-at="2026-04-20T14:28:25 IST" duration-ms="44362" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rachana2026@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCartDescription -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Carttest@198b6731]" started-at="2026-04-20T14:28:25 IST" name="tearDown" finished-at="2026-04-20T14:28:25 IST" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="goToURL()[pri:0, instance:AutomationExcercise.Carttest@198b6731]" started-at="2026-04-20T14:28:25 IST" name="goToURL" finished-at="2026-04-20T14:28:29 IST" duration-ms="4359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToURL -->
+        <test-method signature="verifyCheckoutProcess(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Carttest@198b6731]" started-at="2026-04-20T14:28:29 IST" name="verifyCheckoutProcess" data-provider="existingData" finished-at="2026-04-20T14:29:22 IST" duration-ms="52575" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rachana2026@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCheckoutProcess -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Carttest@198b6731]" started-at="2026-04-20T14:29:22 IST" name="tearDown" finished-at="2026-04-20T14:29:22 IST" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:AutomationExcercise.Carttest@198b6731]" started-at="2026-04-20T14:29:22 IST" name="quitDriver" finished-at="2026-04-20T14:29:22 IST" duration-ms="423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- AutomationExcercise.Carttest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,66 @@
+package AutomationExcercise;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Loigntest extends Basetest{
+
+	@Test
+	public void verifyHomepage()
+	{
+		Loginpage loginpage = goToURL();
+		String actualtitle = loginpage.getHomepageTitle();
+		Assert.assertEquals(actualtitle, expectedtitle);
+	}
+	
+	@Test
+	public void verifyUserSignUp()
+	{
+		Loginpage loginpage = goToURL();
+		loginpage.signUp();
+		loginpage.selectCheckbox();
+		Assert.assertTrue(loginpage.newslettercheckbox.isSelected());
+		loginpage.selectDay("10");
+		loginpage.selectMonth("April");
+		loginpage.selectYear("1980");
+		loginpage.selectCountry("India");
+		String actualmessage = loginpage.addDetails();
+		Assert.assertEquals(actualmessage, expectedmessage);
+	}
+	
+	@Test
+	public void verifyExistingEmail()
+	{
+		Loginpage loginpage = goToURL();
+		loginpage.signUp();
+		String errormesage = loginpage.addExistingEmail();
+		Assert.assertEquals(errormesage, expectederrormessage);
+	}
+	
+	@Test
+	public void verifyLogin()
+	{
+		Loginpage loginpage = goToURL();
+		String actualtext = loginpage.checkLogin();
+		Assert.assertTrue(actualtext.contains(expectedtext));
+	}
+	
+	@Test
+	public void verifyDeleteAccount()
+	{
+		Loginpage loginpage = goToURL();
+		String actualdeleteaccountmessage = loginpage.checkDeleteAccount();
+		Assert.assertEquals(actualdeleteaccountmessage, expecteddeletemessage);
+	}
+	
+	@Test
+	public void verifyinvalidLogin()
+	{
+		Loginpage loginpage = goToURL();
+		String actualinvaliderrormessage = loginpage.checkExistingLogin();
+		Assert.assertThrows(actualinvaliderrormessage.contains(expectedinvaliderrormessage)));
+		
+		
+	}
+	
+}

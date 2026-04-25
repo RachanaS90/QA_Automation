@@ -1,0 +1,38 @@
+package POJO;
+
+import java.util.List;
+
+public class SpecialConcretes {
+
+	private int alertId;
+	private String alertCode;
+	private String alertLbl;
+	private ConcreteDetails concretesDetails;
+	
+	public int getAlertId() {
+		return alertId;
+	}
+	public void setAlertId(int alertId) {
+		this.alertId = alertId;
+	}
+	public String getAlertCode() {
+		return alertCode;
+	}
+	public void setAlertCode(String alertCode) {
+		this.alertCode = alertCode;
+	}
+	public String getAlertLbl() {
+		return alertLbl;
+	}
+	public void setAlertLbl(String alertLbl) {
+		this.alertLbl = alertLbl;
+	}
+	public ConcreteDetails getConcretesDetails() {
+		return concretesDetails;
+	}
+	public void setConcretesDetails(ConcreteDetails concretesDetails) {
+		this.concretesDetails = concretesDetails;
+	}
+	
+	
+}

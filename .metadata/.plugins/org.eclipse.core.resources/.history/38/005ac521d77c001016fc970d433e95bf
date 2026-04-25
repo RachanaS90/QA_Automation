@@ -1,0 +1,18 @@
+package POJO;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.List;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Root {
+	    @JsonProperty("ET_COLIS")
+	    private List<GetWoodArticles> ET_COLIS;
+
+	    public List<GetWoodArticles> getET_COLIS() {
+	        return ET_COLIS;
+	    }
+
+	    public void setET_COLIS(List<GetWoodArticles> ET_COLIS) {
+	        this.ET_COLIS = ET_COLIS;
+	    }
+}

@@ -1,0 +1,19 @@
+package POJO;
+
+import java.util.List;
+
+public class ConcreteDetails {
+	
+	private String concreteCharacTypesLbl;
+	private List<ConcreteCharacTypes> concreteCharacTypes;
+
+	public List<ConcreteCharacTypes> getConcreteCharacTypes() {
+		return concreteCharacTypes;
+	}
+
+	public void setConcreteCharacTypes(List<ConcreteCharacTypes> concreteCharacTypes) {
+		this.concreteCharacTypes = concreteCharacTypes;
+	}
+
+	
+}

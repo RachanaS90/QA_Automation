@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="io.restassured.http.ContentType"/>
+    <fullyQualifiedTypeName name="laboAPIMain.GetMasterData"/>
+    <fullyQualifiedTypeName name="laboAPIMain.GetOAuthToken"/>
+    <fullyQualifiedTypeName name="POJO.OrderDetails"/>
+    <fullyQualifiedTypeName name="DriveAPI.AutomateDriveAPI"/>
+    <fullyQualifiedTypeName name="POJO.Tours"/>
+    <fullyQualifiedTypeName name="POJO.Orders"/>
+    <fullyQualifiedTypeName name="POJO.AlertCodeDetails"/>
+    <fullyQualifiedTypeName name="POJO.AlertDetails"/>
+    <fullyQualifiedTypeName name="laboAPIMain.GetDeliveryNotes"/>
+    <fullyQualifiedTypeName name="laboAPIMain.VersionCheck"/>
+    <fullyQualifiedTypeName name="org.checkerframework.common.value.qual.StaticallyExecutable"/>
+    <fullyQualifiedTypeName name="Files.payloads"/>
+    <fullyQualifiedTypeName name="Files.ReUsableMethods"/>
+    <fullyQualifiedTypeName name="io.cucumber.junit.Cucumber"/>
+    <fullyQualifiedTypeName name="resources.APIResources"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+    <fullyQualifiedTypeName name="org.apache.hc.core5.util.Asserts"/>
+    <fullyQualifiedTypeName name="java.lang.AssertionError"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="com.aventstack.extentreports.Status"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By.ByXPath"/>
+    <fullyQualifiedTypeName name="POJO.ColisHeader"/>
+    <fullyQualifiedTypeName name="POJO.Root"/>
+    <fullyQualifiedTypeName name="io.restassured.builder.RequestSpecBuilder"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.aventstack.extentreports.reporter.configuration.Theme"/>
+    <fullyQualifiedTypeName name="io.github.bonigarcia.wdm.WebDriverManager"/>
+    <fullyQualifiedTypeName name="java.time.Duration"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
+    <fullyQualifiedTypeName name="AutomationExcercise.Cartpage"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
+</qualifiedTypeNameHistroy>

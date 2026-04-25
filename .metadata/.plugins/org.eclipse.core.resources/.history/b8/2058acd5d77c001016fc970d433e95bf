@@ -1,0 +1,15 @@
+package POJO;
+import java.util.List;
+
+public class Root {
+	    
+	    private List<GetWoodArticles> ET_COLIS;
+
+	    public List<GetWoodArticles> getET_COLIS() {
+	        return ET_COLIS;
+	    }
+
+	    public void setET_COLIS(List<GetWoodArticles> ET_COLIS) {
+	        this.ET_COLIS = ET_COLIS;
+	    }
+}

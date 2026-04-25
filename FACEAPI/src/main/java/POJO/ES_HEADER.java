@@ -1,0 +1,367 @@
+package POJO;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+public class ES_HEADER {
+
+	private String VBELN;
+    private String ERNAM;
+    private String ERDAT;
+    private String ERZET;
+    private String VKORG;
+    private String VTWEG;
+    private String ZUONR;
+    private String FKTYP;
+    private String WADAT_IST;
+    private String BON_COM;
+    private String CUST_ORDER_FORM;
+    private String BSTKD;
+    private String DOC_TYPE;
+    private String STATUS;
+    private String ZTERM_TEXT;
+    private String CREATOR_EMAIL;
+    private BigDecimal NETWR;
+    private BigDecimal MWSBK;
+    private BigDecimal TOTAL_TTC;
+    private String CURRENCY;
+    private String DISPLAY_PRICE;
+    private String BON_MODIF;
+    private String PREVIOUS_FNE;
+    private BigDecimal TOTAL_WEIGHT;
+    private String WEIGHT_UNIT;
+    private String ZZBSTKD_E;
+    private String VCHNR;
+    private String AUSDAT;
+    private String ERNAM_TXT;
+    private String LAND1;
+    private String ZZTSS;
+    private String ZZLFDAT;
+    private String LOADING_POINT;
+    private String TAX_DEST_CT;
+    private String ALT_TAX_CL;
+    private String TAX_CLASS2;
+    private String VAT_ORDER_FORM;
+    private List<Object> VAT_ORDER_FORM_LIST;
+    private String VAT_HEADER_LABEL;
+    private String XBLNR;
+    private String SDABW;
+    private String LOCKER_STATUS;
+    private String OCCAS_INVOICE;
+    private String ZZSENDTO_MOBILITY;
+    private String VSBED;
+    private String BUKRS;
+    private String ZZTMSTS;
+    private String FKART;
+    private String VCHNR_TYP;
+    private String ZZIS_VAL;
+    private String DEDUCTIBLE_RETURN;
+    
+    //Getter and Setter methods
+	public String getVBELN() {
+		return VBELN;
+	}
+	public void setVBELN(String vBELN) {
+		this.VBELN = vBELN;
+	}
+	public String getERNAM() {
+		return ERNAM;
+	}
+	public void setERNAM(String eRNAM) {
+		this.ERNAM = eRNAM;
+	}
+	public String getERDAT() {
+		return ERDAT;
+	}
+	public void setERDAT(String eRDAT) {
+		this.ERDAT = eRDAT;
+	}
+	public String getERZET() {
+		return ERZET;
+	}
+	public void setERZET(String eRZET) {
+		this.ERZET = eRZET;
+	}
+	public String getVKORG() {
+		return VKORG;
+	}
+	public void setVKORG(String vKORG) {
+		this.VKORG = vKORG;
+	}
+	public String getVTWEG() {
+		return VTWEG;
+	}
+	public void setVTWEG(String vTWEG) {
+		this.VTWEG = vTWEG;
+	}
+	public String getZUONR() {
+		return ZUONR;
+	}
+	public void setZUONR(String zUONR) {
+		this.ZUONR = zUONR;
+	}
+	public String getFKTYP() {
+		return FKTYP;
+	}
+	public void setFKTYP(String fKTYP) {
+		this.FKTYP = fKTYP;
+	}
+	public String getWADAT_IST() {
+		return WADAT_IST;
+	}
+	public void setWADAT_IST(String wADAT_IST) {
+		this.WADAT_IST = wADAT_IST;
+	}
+	public String getBON_COM() {
+		return BON_COM;
+	}
+	public void setBON_COM(String bON_COM) {
+		this.BON_COM = bON_COM;
+	}
+	public String getCUST_ORDER_FORM() {
+		return CUST_ORDER_FORM;
+	}
+	public void setCUST_ORDER_FORM(String cUST_ORDER_FORM) {
+		this.CUST_ORDER_FORM = cUST_ORDER_FORM;
+	}
+	public String getBSTKD() {
+		return BSTKD;
+	}
+	public void setBSTKD(String bSTKD) {
+		this.BSTKD = bSTKD;
+	}
+	public String getDOC_TYPE() {
+		return DOC_TYPE;
+	}
+	public void setDOC_TYPE(String dOC_TYPE) {
+		this.DOC_TYPE = dOC_TYPE;
+	}
+	public String getSTATUS() {
+		return STATUS;
+	}
+	public void setSTATUS(String sTATUS) {
+		this.STATUS = sTATUS;
+	}
+	public String getZTERM_TEXT() {
+		return ZTERM_TEXT;
+	}
+	public void setZTERM_TEXT(String zTERM_TEXT) {
+		this.ZTERM_TEXT = zTERM_TEXT;
+	}
+	public String getCREATOR_EMAIL() {
+		return CREATOR_EMAIL;
+	}
+	public void setCREATOR_EMAIL(String cREATOR_EMAIL) {
+		this.CREATOR_EMAIL = cREATOR_EMAIL;
+	}
+	public BigDecimal getNETWR() {
+		return NETWR;
+	}
+	public void setNETWR(BigDecimal nETWR) {
+		this.NETWR = nETWR;
+	}
+	public BigDecimal getMWSBK() {
+		return MWSBK;
+	}
+	public void setMWSBK(BigDecimal mWSBK) {
+		this.MWSBK = mWSBK;
+	}
+	public BigDecimal getTOTAL_TTC() {
+		return TOTAL_TTC;
+	}
+	public void setTOTAL_TTC(BigDecimal tOTAL_TTC) {
+		this.TOTAL_TTC = tOTAL_TTC;
+	}
+	public String getCURRENCY() {
+		return CURRENCY;
+	}
+	public void setCURRENCY(String cURRENCY) {
+		this.CURRENCY = cURRENCY;
+	}
+	public String getDISPLAY_PRICE() {
+		return DISPLAY_PRICE;
+	}
+	public void setDISPLAY_PRICE(String dISPLAY_PRICE) {
+		this.DISPLAY_PRICE = dISPLAY_PRICE;
+	}
+	public String getBON_MODIF() {
+		return BON_MODIF;
+	}
+	public void setBON_MODIF(String bON_MODIF) {
+		this.BON_MODIF = bON_MODIF;
+	}
+	public String getPREVIOUS_FNE() {
+		return PREVIOUS_FNE;
+	}
+	public void setPREVIOUS_FNE(String pREVIOUS_FNE) {
+		this.PREVIOUS_FNE = pREVIOUS_FNE;
+	}
+	public BigDecimal getTOTAL_WEIGHT() {
+		return TOTAL_WEIGHT;
+	}
+	public void setTOTAL_WEIGHT(BigDecimal tOTAL_WEIGHT) {
+		this.TOTAL_WEIGHT = tOTAL_WEIGHT;
+	}
+	public String getWEIGHT_UNIT() {
+		return WEIGHT_UNIT;
+	}
+	public void setWEIGHT_UNIT(String wEIGHT_UNIT) {
+		this.WEIGHT_UNIT = wEIGHT_UNIT;
+	}
+	public String getZZBSTKD_E() {
+		return ZZBSTKD_E;
+	}
+	public void setZZBSTKD_E(String zZBSTKD_E) {
+		this.ZZBSTKD_E = zZBSTKD_E;
+	}
+	public String getVCHNR() {
+		return VCHNR;
+	}
+	public void setVCHNR(String vCHNR) {
+		this.VCHNR = vCHNR;
+	}
+	public String getAUSDAT() {
+		return AUSDAT;
+	}
+	public void setAUSDAT(String aUSDAT) {
+		this.AUSDAT = aUSDAT;
+	}
+	public String getERNAM_TXT() {
+		return ERNAM_TXT;
+	}
+	public void setERNAM_TXT(String eRNAM_TXT) {
+		this.ERNAM_TXT = eRNAM_TXT;
+	}
+	public String getLAND1() {
+		return LAND1;
+	}
+	public void setLAND1(String lAND1) {
+		this.LAND1 = lAND1;
+	}
+	public String getZZTSS() {
+		return ZZTSS;
+	}
+	public void setZZTSS(String zZTSS) {
+		this.ZZTSS = zZTSS;
+	}
+	public String getZZLFDAT() {
+		return ZZLFDAT;
+	}
+	public void setZZLFDAT(String zZLFDAT) {
+		this.ZZLFDAT = zZLFDAT;
+	}
+	public String getLOADING_POINT() {
+		return LOADING_POINT;
+	}
+	public void setLOADING_POINT(String lOADING_POINT) {
+		this.LOADING_POINT = lOADING_POINT;
+	}
+	public String getTAX_DEST_CT() {
+		return TAX_DEST_CT;
+	}
+	public void setTAX_DEST_CT(String tAX_DEST_CT) {
+		this.TAX_DEST_CT = tAX_DEST_CT;
+	}
+	public String getALT_TAX_CL() {
+		return ALT_TAX_CL;
+	}
+	public void setALT_TAX_CL(String aLT_TAX_CL) {
+		this.ALT_TAX_CL = aLT_TAX_CL;
+	}
+	public String getTAX_CLASS2() {
+		return TAX_CLASS2;
+	}
+	public void setTAX_CLASS2(String tAX_CLASS2) {
+		this.TAX_CLASS2 = tAX_CLASS2;
+	}
+	public String getVAT_ORDER_FORM() {
+		return VAT_ORDER_FORM;
+	}
+	public void setVAT_ORDER_FORM(String vAT_ORDER_FORM) {
+		this.VAT_ORDER_FORM = vAT_ORDER_FORM;
+	}
+	public List<Object> getVAT_ORDER_FORM_LIST() {
+		return VAT_ORDER_FORM_LIST;
+	}
+	public void setVAT_ORDER_FORM_LIST(List<Object> vAT_ORDER_FORM_LIST) {
+		this.VAT_ORDER_FORM_LIST = vAT_ORDER_FORM_LIST;
+	}
+	public String getVAT_HEADER_LABEL() {
+		return VAT_HEADER_LABEL;
+	}
+	public void setVAT_HEADER_LABEL(String vAT_HEADER_LABEL) {
+		this.VAT_HEADER_LABEL = vAT_HEADER_LABEL;
+	}
+	public String getXBLNR() {
+		return XBLNR;
+	}
+	public void setXBLNR(String xBLNR) {
+		this.XBLNR = xBLNR;
+	}
+	public String getSDABW() {
+		return SDABW;
+	}
+	public void setSDABW(String sDABW) {
+		this.SDABW = sDABW;
+	}
+	public String getLOCKER_STATUS() {
+		return LOCKER_STATUS;
+	}
+	public void setLOCKER_STATUS(String lOCKER_STATUS) {
+		this.LOCKER_STATUS = lOCKER_STATUS;
+	}
+	public String getOCCAS_INVOICE() {
+		return OCCAS_INVOICE;
+	}
+	public void setOCCAS_INVOICE(String oCCAS_INVOICE) {
+		this.OCCAS_INVOICE = oCCAS_INVOICE;
+	}
+	public String getZZSENDTO_MOBILITY() {
+		return ZZSENDTO_MOBILITY;
+	}
+	public void setZZSENDTO_MOBILITY(String zZSENDTO_MOBILITY) {
+		this.ZZSENDTO_MOBILITY = zZSENDTO_MOBILITY;
+	}
+	public String getVSBED() {
+		return VSBED;
+	}
+	public void setVSBED(String vSBED) {
+		this.VSBED = vSBED;
+	}
+	public String getBUKRS() {
+		return BUKRS;
+	}
+	public void setBUKRS(String bUKRS) {
+		this.BUKRS = bUKRS;
+	}
+	public String getZZTMSTS() {
+		return ZZTMSTS;
+	}
+	public void setZZTMSTS(String zZTMSTS) {
+		ZZTMSTS = zZTMSTS;
+	}
+	public String getFKART() {
+		return FKART;
+	}
+	public void setFKART(String fKART) {
+		this.FKART = fKART;
+	}
+	public String getVCHNR_TYP() {
+		return VCHNR_TYP;
+	}
+	public void setVCHNR_TYP(String vCHNR_TYP) {
+		this.VCHNR_TYP = vCHNR_TYP;
+	}
+	public String getZZIS_VAL() {
+		return ZZIS_VAL;
+	}
+	public void setZZIS_VAL(String zZIS_VAL) {
+		this.ZZIS_VAL = zZIS_VAL;
+	}
+	public String getDEDUCTIBLE_RETURN() {
+		return DEDUCTIBLE_RETURN;
+	}
+	public void setDEDUCTIBLE_RETURN(String dEDUCTIBLE_RETURN) {
+		this.DEDUCTIBLE_RETURN = dEDUCTIBLE_RETURN;
+	}
+}

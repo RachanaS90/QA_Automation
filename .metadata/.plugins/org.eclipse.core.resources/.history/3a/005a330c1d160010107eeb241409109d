@@ -1,0 +1,19 @@
+package POJO;
+
+public class FormulaSpecialAlerts {
+
+	private String formulaCode;
+	public String getFormulaCode() {
+		return formulaCode;
+	}
+	public void setFormulaCode(String formulaCode) {
+		this.formulaCode = formulaCode;
+	}
+	public String getFormulaDescription() {
+		return formulaDescription;
+	}
+	public void setFormulaDescription(String formulaDescription) {
+		this.formulaDescription = formulaDescription;
+	}
+	private String formulaDescription;
+}

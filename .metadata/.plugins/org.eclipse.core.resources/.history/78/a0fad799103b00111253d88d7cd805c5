@@ -1,0 +1,205 @@
+package AutomationExcercise;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+public class Loginpage extends Basepage {
+
+	WebDriver driver;
+
+	public Loginpage(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(xpath="//a[@href='/login']")
+	WebElement signup;
+	
+	@FindBy(css="input[data-qa='signup-name']")
+	WebElement signupname;
+	
+	@FindBy(css="input[data-qa='signup-email']")
+	WebElement signupemail;
+	
+	@FindBy(css="button[data-qa='signup-button']")
+	WebElement signupbtn;
+	
+	@FindBy(id="id_gender2")
+	WebElement genderselection;
+	
+	@FindBy(id="password")
+	WebElement password;
+	
+	@FindBy(id="days")
+	WebElement days;
+	
+	@FindBy(id="months")
+	WebElement months;
+	
+	@FindBy(id="years")
+	WebElement years;
+	
+	@FindBy(id="newsletter")
+	WebElement newslettercheckbox;
+	
+	@FindBy(id="optin")
+	WebElement optincheckbox;
+	
+	@FindBy(id="first_name")
+	WebElement first_name;
+	
+	@FindBy(id="last_name")
+	WebElement last_name;
+	
+	@FindBy(id="company")
+	WebElement company;
+	
+	@FindBy(id="address1")
+	WebElement address1;
+	
+	@FindBy(id="address2")
+	WebElement address2;
+	
+	@FindBy(id="country")
+	WebElement countrydropdown;
+	
+	@FindBy(id="state")
+	WebElement state;
+	
+	@FindBy(id="city")
+	WebElement city;
+	
+	@FindBy(id="zipcode")
+	WebElement zipcode;
+	
+	@FindBy(id="mobile_number")
+	WebElement mobile_number;
+	
+	@FindBy(css="button[data-qa='create-account']")
+	WebElement create_account_btn;
+	
+	@FindBy(xpath="//h2[@data-qa='account-created']")
+	WebElement success_message;
+	
+	@FindBy(xpath="//p[contains(text(),'Email Address already exist!')]")
+	WebElement existing_email_error_message;
+	
+	@FindBy(css="input[data-qa='login-email']")
+	WebElement login_email;
+	
+	@FindBy(css="input[data-qa='login-password']")
+	WebElement login_password;
+	
+	@FindBy(css="button[data-qa='login-button']")
+	WebElement login_btn;
+	
+	@FindBy(css="a[href='/delete_account']")
+	WebElement deleteaccount_link;
+	
+	@FindBy(css="h2[data-qa='account-deleted']")
+	WebElement deleteaccountmessage;
+	
+	@FindBy(xpath="//a[contains(text(),'Logged in as')]")
+	WebElement login_text;
+	
+	@FindBy(xpath="//p[contains(text(),'Your email or password is incorrect!')]")
+	WebElement invalid_login_text;
+	
+
+	
+			
+	public String getHomepageTitle()
+	{
+		return driver.getTitle();
+	}
+	
+	public void selectDay(String day) {
+        Select selectDay = new Select(days);
+        selectDay.selectByVisibleText(day);   // dynamic value from test data
+    }
+
+    public void selectMonth(String month) {
+        Select selectMonth = new Select(months);
+        selectMonth.selectByVisibleText(month);
+    }
+
+    public void selectYear(String year) {
+        Select selectYear = new Select(years);
+        selectYear.selectByVisibleText(year);
+    }
+    
+    public void selectCountry(String countryName) {
+    	Select selectCountry = new Select(countrydropdown);
+		selectCountry.selectByVisibleText(countryName); // e.g. "India"
+    }
+    
+	public void signUp(String username,String email)
+	{
+		elementToBeClickable(signup).click();
+		signupname.sendKeys(username);
+		signupemail.sendKeys(email);
+		signupbtn.click();
+	}
+	
+	public void selectCheckbox()
+	{
+		newslettercheckbox.click();
+		optincheckbox.click();
+	}
+	
+	public String addDetails(String signpassword)
+	{
+		elementToBeClickable(genderselection).click();
+		visibilityOf(password).sendKeys(signpassword);
+		visibilityOf(first_name).sendKeys("Rachana");
+		last_name.sendKeys("Sinha");
+		company.sendKeys("test company");
+		address1.sendKeys("Mumbai");
+		address2.sendKeys("test");
+	    state.sendKeys("Maharashtra");
+	    city.sendKeys("Mumbai");
+	    zipcode.sendKeys("411089");
+	    mobile_number.sendKeys("9089908978");
+	    create_account_btn.click();
+	    String message = success_message.getText();
+	    return message; 
+	}
+	
+	public String addExistingEmail()
+	{
+		return existing_email_error_message.getText();
+	}
+	
+	public String checkLogin(String email,String password)
+	{
+		elementToBeClickable(signup).click();
+		login_email.sendKeys(email);
+		login_password.sendKeys(password);
+		login_btn.click();
+		String logintext = login_text.getText();
+		return logintext;
+	}
+	
+	public String checkDeleteAccount(String email, String password)
+	{
+		 checkLogin(email, password);
+		 deleteaccount_link.click();
+		 return deleteaccountmessage.getText();
+	}
+	
+	public String checkExistingLogin(String email, String password)
+	{
+		elementToBeClickable(signup).click();
+		login_email.sendKeys(email);
+		login_password.sendKeys(password);
+		login_btn.click();
+		return invalid_login_text.getText();
+	}
+	
+	
+
+}
