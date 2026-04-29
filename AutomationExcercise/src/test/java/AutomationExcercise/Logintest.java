@@ -2,9 +2,8 @@ package AutomationExcercise;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+
 
 public class Logintest extends Basetest{
 
@@ -12,14 +11,14 @@ public class Logintest extends Basetest{
 	@DataProvider(name = "signupData")
 	public Object[][] signupData() {
 	    return new Object[][] {
-	        {"Rachana Sinha", "Rachana2030@gmail.com","test@123","10", "April", "1980", "India", "ACCOUNT CREATED!"}
+	        {"Rachana Sinha", "Rachana2033@gmail.com","test@123","10", "April", "1980", "India", "ACCOUNT CREATED!"}
 	    };	
 	}
 	
 	@DataProvider(name ="existingSignupData")
 	public Object[][] existingSignupData(){
 		return new Object[][] {
-			{"Rachana Sinha","RachanaNew@gmail.com"}
+			{"Rachana Sinha","Rachana2033@gmail.com"}
 		};
 	}
 	
@@ -33,7 +32,7 @@ public class Logintest extends Basetest{
 	@DataProvider(name ="deleteAccount")
 	public Object[][] deleteAccount(){
 		return new Object[][] {
-			{"Rachana20218@gmail.com","test@123"}
+			{"Rachana2033@gmail.com","test@123"}
 		};
 	}
 	
@@ -45,14 +44,14 @@ public class Logintest extends Basetest{
 		};
 	}
 	
-	@Test(priority=0)
+	@Test(groups= {"smoke", "regression"}, priority=0)
 	public void verifyHomepage()
 	{
 		String actualtitle = loginpage.getHomepageTitle();
 		AssertJUnit.assertEquals(actualtitle, expectedtitle);
 	}
 	
-	@Test(dataProvider = "signupData", priority=1)
+	@Test(groups={"smoke", "regression"}, dataProvider = "signupData", priority=1)
 	public void verifyUserSignUp(String username, String email, String password,String day, String month, String year, String country, String expectedMessage)
 	{
 		loginpage.signUp(username,email);
@@ -66,7 +65,7 @@ public class Logintest extends Basetest{
 		AssertJUnit.assertEquals(actualmessage, expectedMessage);
 	}
 	
-	@Test(dataProvider = "existingSignupData", priority=2)
+	@Test(groups={"regression"}, dataProvider = "existingSignupData", priority=2)
 	public void verifyExistingEmail(String username, String email)
 	{
 		loginpage.signUp(username,email);
@@ -75,20 +74,20 @@ public class Logintest extends Basetest{
 	}
 	
 
-	@Test(dataProvider = "existingData", priority=3)
+	@Test(groups={"smoke"}, dataProvider = "existingData", priority=3)
 	public void verifyLogin(String email, String password)
 	{
 		loginpage.checkLogin(email, password);
 	}
 	
-	@Test(dataProvider="deleteAccount", priority=4)
+	@Test(groups={"smoke","regression"},dataProvider="deleteAccount", priority=4)
 	public void verifyDeleteAccount(String email, String password)
 	{
 		String actualdeleteaccountmessage = loginpage.checkDeleteAccount(email,password);
 		AssertJUnit.assertEquals(actualdeleteaccountmessage, expecteddeletemessage);
 	}
 	
-	@Test(dataProvider="invalidLoginData", priority=5)
+	@Test(groups = {"regression"}, dataProvider="invalidLoginData", priority=5)
 	public void verifyinvalidLogin(String invalidemail, String invalidpassword)
 	{
 		String actualinvaliderrormessage = loginpage.checkExistingLogin(invalidemail, invalidpassword);

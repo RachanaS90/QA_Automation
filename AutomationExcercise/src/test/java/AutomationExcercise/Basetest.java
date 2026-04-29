@@ -1,23 +1,21 @@
 package AutomationExcercise;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-import org.testng.annotations.AfterTest;
-
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Basetest {
 
-	WebDriver driver;
-	String expectedtitle = "Automation Exercise";
+    protected WebDriver driver;       // MUST be protected
+    protected Loginpage loginpage;     // accessible to child tests
+    
+    String expectedtitle = "Automation Exercise";
 	String expectederrormessage = "Email Address already exist!";
 	String expectedtext = "Logged in as";
 	String expecteddeletemessage = "ACCOUNT DELETED!";
@@ -26,46 +24,30 @@ public class Basetest {
 	String expectedsearchproducttitle = "SEARCHED PRODUCTS";
 	String productName = "Men Tshirt";
 	String expectedorderplacedmessage = "ORDER PLACED!";
-	
-	Loginpage loginpage;
-	
-	public WebDriver initializeDriver()
-	{
-	 WebDriverManager.chromedriver().setup();
-	 
-	// Configure ChromeOptions for incognito mode
-	 ChromeOptions options = new ChromeOptions();
-	 options.addArguments("--incognito");
-	 
-	 driver = new ChromeDriver(options);
-	 driver.manage().deleteAllCookies();
-	 driver.manage().window().maximize();
-	 driver.manage().timeouts().implicitlyWait(Duration.ofMillis(2000));
-	 return driver;
-	}
-	
-	@BeforeMethod
-	@BeforeTest
-    public void setUp() {
-        initializeDriver();
-    }
 
-    @BeforeMethod
-    public void goToURL() {
+    @BeforeMethod(alwaysRun = true)
+    public void setUp() {
+
+        WebDriverManager.chromedriver().setup();
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito");
+
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
         driver.get("https://automationexercise.com");
+
+        // ✅ Initialize page object AFTER driver
         loginpage = new Loginpage(driver);
     }
 
-	@AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
-        driver.manage().deleteAllCookies();
+        if (driver != null) {
+            driver.quit();
+        }
     }
-
-    @AfterTest
-    public void quitDriver() {
-        driver.quit();
-    }
-	
-	
-	}
-	
+}

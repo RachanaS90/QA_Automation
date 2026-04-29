@@ -11,7 +11,7 @@ public class Producttest extends Basetest{
 	Homepage homepage;
 
 	
-	@Test(dataProvider="existingData",dataProviderClass = Logintest.class,priority=0)
+	@Test(groups={"smoke"}, dataProvider="existingData",dataProviderClass = Logintest.class,priority=0)
 	public void verifyAllProductsPage(String email, String password)
 	{
 		homepage = loginpage.checkLogin(email, password);
@@ -20,7 +20,7 @@ public class Producttest extends Basetest{
 		AssertJUnit.assertTrue(actualproducttitle.contains(expectedproducttext));
 	}
 	
-	@Test(dataProvider="existingData",dataProviderClass = Logintest.class,priority=1)
+	@Test(groups={"smoke", "regression"}, dataProvider="existingData",dataProviderClass = Logintest.class,priority=1)
 	public void searchProduct(String email, String password)
 	{
 		homepage = loginpage.checkLogin(email, password);
@@ -31,14 +31,14 @@ public class Producttest extends Basetest{
 		AssertJUnit.assertTrue(productpage.verifySearchedResult("TShirt"));
 	}
 	
-	@Test(dataProvider="existingData",dataProviderClass = Logintest.class,priority=2)
+	@Test(groups={"smoke", "regression"},dataProvider="existingData",dataProviderClass = Logintest.class,priority=2)
 	public void verifyClickProductByName(String email, String password) {
 		homepage = loginpage.checkLogin(email, password);
 		productpage  = homepage.getProducts();
 	    productpage.clickProductByName("Men Tshirt"); 
 	}
 	
-	@Test(dataProvider="existingData",dataProviderClass = Logintest.class,priority=3)
+	@Test(groups={"smoke", "regression"},dataProvider="existingData",dataProviderClass = Logintest.class,priority=3)
 	public void verifyProductAddedToCart(String email, String password)
 	{
 		homepage = loginpage.checkLogin(email, password);

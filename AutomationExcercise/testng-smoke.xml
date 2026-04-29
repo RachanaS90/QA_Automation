@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Suite">
+
+    <groups>
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>
+
+    <test name="Login Smoke Tests">
+        <classes>
+            <class name="AutomationExcercise.Logintest"/>
+        </classes>
+    </test>
+
+    <test name="Home Smoke Tests">
+        <classes>
+            <class name="AutomationExcercise.Hometest"/>
+        </classes>
+    </test>
+
+    <test name="Product Smoke Tests">
+        <classes>
+            <class name="AutomationExcercise.Producttest"/>
+        </classes>
+    </test>
+
+    <test name="Cart Smoke Tests">
+        <classes>
+            <class name="AutomationExcercise.Carttest"/>
+        </classes>
+    </test>
+
+</suite>

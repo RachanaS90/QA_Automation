@@ -11,7 +11,7 @@ public class Carttest extends Basetest{
 	Homepage homepage;
 	Productpage productpage;
 	
-	@Test(dataProvider="existingData",dataProviderClass=Logintest.class, priority=0)
+	@Test(groups={"smoke"},dataProvider="existingData",dataProviderClass=Logintest.class, priority=0)
 	public void verifyCartDescription(String email, String password)
 	{
 		homepage = loginpage.checkLogin(email, password);
@@ -25,7 +25,7 @@ public class Carttest extends Basetest{
 	    AssertJUnit.assertEquals(item.getPrice(), "Rs. 400"); 
 	}
 	
-	@Test(dataProvider="existingData",dataProviderClass=Logintest.class, priority = 1)
+	@Test(groups={"smoke", "regression"},dataProvider="existingData",dataProviderClass=Logintest.class, priority = 1)
 	public void verifyCheckoutProcess(String email, String password)
 	{
 		homepage = loginpage.checkLogin(email, password);

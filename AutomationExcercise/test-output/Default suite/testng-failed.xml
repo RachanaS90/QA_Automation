@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="AutomationExcercise.Carttest">
+      <class name="AutomationExcercise.Logintest">
         <methods>
-          <include name="verifyCartDescription" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="verifyCheckoutProcess" invocation-numbers="0"/>
-          <include name="setUp"/>
-          <include name="goToURL"/>
-          <include name="quitDriver"/>
+          <include name="verifyHomepage"/>
+          <include name="initializeDriver"/>
         </methods>
-      </class> <!-- AutomationExcercise.Carttest -->
+      </class> <!-- AutomationExcercise.Logintest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
