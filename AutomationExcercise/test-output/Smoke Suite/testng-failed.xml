@@ -12,27 +12,11 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="verifyDeleteAccount" invocation-numbers="0"/>
+          <include name="verifyExistingEmail" invocation-numbers="0"/>
         </methods>
       </class> <!-- AutomationExcercise.Logintest -->
     </classes>
   </test> <!-- Login Smoke Tests(failed) -->
-  <test thread-count="5" name="Product Smoke Tests(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="AutomationExcercise.Producttest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyAllProductsPage" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- AutomationExcercise.Producttest -->
-    </classes>
-  </test> <!-- Product Smoke Tests(failed) -->
   <test thread-count="5" name="Cart Smoke Tests(failed)">
     <groups>
       <run>
@@ -44,6 +28,7 @@
         <methods>
           <include name="verifyCartDescription" invocation-numbers="0"/>
           <include name="tearDown"/>
+          <include name="verifyCheckoutProcess" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- AutomationExcercise.Carttest -->

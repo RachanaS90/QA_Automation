@@ -1,50 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="14" passed="8" failed="3" skipped="0">
+<testng-results ignored="1" total="14" passed="10" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-29T10:43:18 IST" name="Smoke Suite" finished-at="2026-04-29T10:47:49 IST" duration-ms="270581">
+  <suite started-at="2026-05-06T17:48:50 IST" name="Smoke Suite" finished-at="2026-05-06T17:52:44 IST" duration-ms="234882">
     <groups>
       <group name="regression">
-        <method signature="Logintest.verifyHomepage()[pri:0, instance:AutomationExcercise.Logintest@229f66ed]" name="verifyHomepage" class="AutomationExcercise.Logintest"/>
-        <method signature="Logintest.verifyDeleteAccount(java.lang.String,java.lang.String)[pri:4, instance:AutomationExcercise.Logintest@229f66ed]" name="verifyDeleteAccount" class="AutomationExcercise.Logintest"/>
-        <method signature="Producttest.searchProduct(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Producttest@63070bab]" name="searchProduct" class="AutomationExcercise.Producttest"/>
-        <method signature="Producttest.verifyClickProductByName(java.lang.String,java.lang.String)[pri:2, instance:AutomationExcercise.Producttest@63070bab]" name="verifyClickProductByName" class="AutomationExcercise.Producttest"/>
-        <method signature="Producttest.verifyProductAddedToCart(java.lang.String,java.lang.String)[pri:3, instance:AutomationExcercise.Producttest@63070bab]" name="verifyProductAddedToCart" class="AutomationExcercise.Producttest"/>
-        <method signature="Carttest.verifyCheckoutProcess(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Carttest@10d68fcd]" name="verifyCheckoutProcess" class="AutomationExcercise.Carttest"/>
+        <method signature="Logintest.verifyHomepage()[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" name="verifyHomepage" class="AutomationExcercise.Logintest"/>
+        <method signature="Logintest.verifyUserSignUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Logintest@7d900ecf]" name="verifyUserSignUp" class="AutomationExcercise.Logintest"/>
+        <method signature="Logintest.verifyExistingEmail(java.lang.String,java.lang.String)[pri:2, instance:AutomationExcercise.Logintest@7d900ecf]" name="verifyExistingEmail" class="AutomationExcercise.Logintest"/>
+        <method signature="Logintest.verifyDeleteAccount(java.lang.String,java.lang.String)[pri:4, instance:AutomationExcercise.Logintest@7d900ecf]" name="verifyDeleteAccount" class="AutomationExcercise.Logintest"/>
+        <method signature="Producttest.searchProduct(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Producttest@7486b455]" name="searchProduct" class="AutomationExcercise.Producttest"/>
+        <method signature="Producttest.verifyClickProductByName(java.lang.String,java.lang.String)[pri:2, instance:AutomationExcercise.Producttest@7486b455]" name="verifyClickProductByName" class="AutomationExcercise.Producttest"/>
+        <method signature="Producttest.verifyProductAddedToCart(java.lang.String,java.lang.String)[pri:3, instance:AutomationExcercise.Producttest@7486b455]" name="verifyProductAddedToCart" class="AutomationExcercise.Producttest"/>
+        <method signature="Carttest.verifyCheckoutProcess(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Carttest@49c90a9c]" name="verifyCheckoutProcess" class="AutomationExcercise.Carttest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="Logintest.verifyHomepage()[pri:0, instance:AutomationExcercise.Logintest@229f66ed]" name="verifyHomepage" class="AutomationExcercise.Logintest"/>
-        <method signature="Logintest.verifyLogin(java.lang.String,java.lang.String)[pri:3, instance:AutomationExcercise.Logintest@229f66ed]" name="verifyLogin" class="AutomationExcercise.Logintest"/>
-        <method signature="Logintest.verifyDeleteAccount(java.lang.String,java.lang.String)[pri:4, instance:AutomationExcercise.Logintest@229f66ed]" name="verifyDeleteAccount" class="AutomationExcercise.Logintest"/>
-        <method signature="Hometest.verifyTestCasesLink(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Hometest@4e3958e7]" name="verifyTestCasesLink" class="AutomationExcercise.Hometest"/>
-        <method signature="Hometest.verifyProductLink(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Hometest@4e3958e7]" name="verifyProductLink" class="AutomationExcercise.Hometest"/>
-        <method signature="Producttest.verifyAllProductsPage(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Producttest@63070bab]" name="verifyAllProductsPage" class="AutomationExcercise.Producttest"/>
-        <method signature="Producttest.searchProduct(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Producttest@63070bab]" name="searchProduct" class="AutomationExcercise.Producttest"/>
-        <method signature="Producttest.verifyClickProductByName(java.lang.String,java.lang.String)[pri:2, instance:AutomationExcercise.Producttest@63070bab]" name="verifyClickProductByName" class="AutomationExcercise.Producttest"/>
-        <method signature="Producttest.verifyProductAddedToCart(java.lang.String,java.lang.String)[pri:3, instance:AutomationExcercise.Producttest@63070bab]" name="verifyProductAddedToCart" class="AutomationExcercise.Producttest"/>
-        <method signature="Carttest.verifyCartDescription(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Carttest@10d68fcd]" name="verifyCartDescription" class="AutomationExcercise.Carttest"/>
-        <method signature="Carttest.verifyCheckoutProcess(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Carttest@10d68fcd]" name="verifyCheckoutProcess" class="AutomationExcercise.Carttest"/>
+        <method signature="Logintest.verifyHomepage()[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" name="verifyHomepage" class="AutomationExcercise.Logintest"/>
+        <method signature="Logintest.verifyUserSignUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Logintest@7d900ecf]" name="verifyUserSignUp" class="AutomationExcercise.Logintest"/>
+        <method signature="Logintest.verifyExistingEmail(java.lang.String,java.lang.String)[pri:2, instance:AutomationExcercise.Logintest@7d900ecf]" name="verifyExistingEmail" class="AutomationExcercise.Logintest"/>
+        <method signature="Logintest.verifyLogin(java.lang.String,java.lang.String)[pri:3, instance:AutomationExcercise.Logintest@7d900ecf]" name="verifyLogin" class="AutomationExcercise.Logintest"/>
+        <method signature="Logintest.verifyDeleteAccount(java.lang.String,java.lang.String)[pri:4, instance:AutomationExcercise.Logintest@7d900ecf]" name="verifyDeleteAccount" class="AutomationExcercise.Logintest"/>
+        <method signature="Hometest.verifyTestCasesLink(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Hometest@508dec2b]" name="verifyTestCasesLink" class="AutomationExcercise.Hometest"/>
+        <method signature="Hometest.verifyProductLink(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Hometest@508dec2b]" name="verifyProductLink" class="AutomationExcercise.Hometest"/>
+        <method signature="Producttest.verifyAllProductsPage(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Producttest@7486b455]" name="verifyAllProductsPage" class="AutomationExcercise.Producttest"/>
+        <method signature="Producttest.searchProduct(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Producttest@7486b455]" name="searchProduct" class="AutomationExcercise.Producttest"/>
+        <method signature="Producttest.verifyClickProductByName(java.lang.String,java.lang.String)[pri:2, instance:AutomationExcercise.Producttest@7486b455]" name="verifyClickProductByName" class="AutomationExcercise.Producttest"/>
+        <method signature="Producttest.verifyProductAddedToCart(java.lang.String,java.lang.String)[pri:3, instance:AutomationExcercise.Producttest@7486b455]" name="verifyProductAddedToCart" class="AutomationExcercise.Producttest"/>
+        <method signature="Carttest.verifyCartDescription(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Carttest@49c90a9c]" name="verifyCartDescription" class="AutomationExcercise.Carttest"/>
+        <method signature="Carttest.verifyCheckoutProcess(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Carttest@49c90a9c]" name="verifyCheckoutProcess" class="AutomationExcercise.Carttest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-04-29T10:43:18 IST" name="Login Smoke Tests" finished-at="2026-04-29T10:44:10 IST" duration-ms="52146">
+    <test started-at="2026-05-06T17:48:50 IST" name="Login Smoke Tests" finished-at="2026-05-06T17:49:41 IST" duration-ms="51062">
       <class name="AutomationExcercise.Logintest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Logintest@229f66ed]" started-at="2026-04-29T10:43:18 IST" name="setUp" finished-at="2026-04-29T10:43:29 IST" duration-ms="10520" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:48:50 IST" name="setUp" finished-at="2026-05-06T17:48:56 IST" duration-ms="6700" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Logintest.verifyHomepage()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@64faf3d]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyHomepage()[pri:0, instance:AutomationExcercise.Logintest@229f66ed]" started-at="2026-04-29T10:43:29 IST" name="verifyHomepage" finished-at="2026-04-29T10:43:29 IST" duration-ms="39" status="PASS">
+        <test-method signature="verifyHomepage()[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:48:56 IST" name="verifyHomepage" finished-at="2026-05-06T17:48:56 IST" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Logintest@229f66ed]" started-at="2026-04-29T10:43:29 IST" name="tearDown" finished-at="2026-04-29T10:43:29 IST" duration-ms="356" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:48:56 IST" name="tearDown" finished-at="2026-05-06T17:48:57 IST" duration-ms="772" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Logintest@229f66ed]" started-at="2026-04-29T10:43:29 IST" name="setUp" finished-at="2026-04-29T10:43:36 IST" duration-ms="6856" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:48:57 IST" name="setUp" finished-at="2026-05-06T17:49:01 IST" duration-ms="3468" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Logintest.verifyUserSignUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@64faf3d]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:3, instance:AutomationExcercise.Logintest@229f66ed]" started-at="2026-04-29T10:43:36 IST" name="verifyLogin" data-provider="existingData" finished-at="2026-04-29T10:43:44 IST" duration-ms="8204" status="PASS">
+        <test-method signature="verifyUserSignUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:01 IST" name="verifyUserSignUp" data-provider="signupData" finished-at="2026-05-06T17:49:10 IST" duration-ms="9511" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rachana Sinha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Rachana2037@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[test@123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[April]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1980]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[ACCOUNT CREATED!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserSignUp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:10 IST" name="tearDown" finished-at="2026-05-06T17:49:12 IST" duration-ms="1738" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:12 IST" name="setUp" finished-at="2026-05-06T17:49:18 IST" duration-ms="6537" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Logintest.verifyExistingEmail(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@64faf3d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyExistingEmail(java.lang.String,java.lang.String)[pri:2, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:18 IST" name="verifyExistingEmail" data-provider="existingSignupData" finished-at="2026-05-06T17:49:23 IST" duration-ms="4970" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rachana Sinha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Rachana2036@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(text(),'Email Address already exist!')]"}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [063f87d30713777e8f79e3b4719052f1, findElement {using=xpath, value=//p[contains(text(),'Email Address already exist!')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\RACHAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63733}, goog:processID: 12096, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63733/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 063f87d30713777e8f79e3b4719052f1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[contains(text(),'Email Address already exist!')]"}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [063f87d30713777e8f79e3b4719052f1, findElement {using=xpath, value=//p[contains(text(),'Email Address already exist!')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\RACHAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63733}, goog:processID: 12096, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63733/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 063f87d30713777e8f79e3b4719052f1
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.getText(Unknown Source)
+at AutomationExcercise.Loginpage.addExistingEmail(Loginpage.java:174)
+at AutomationExcercise.Logintest.verifyExistingEmail(Logintest.java:74)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyExistingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:24 IST" name="tearDown" finished-at="2026-05-06T17:49:24 IST" duration-ms="286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:24 IST" name="setUp" finished-at="2026-05-06T17:49:28 IST" duration-ms="3838" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Logintest.verifyLogin(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@64faf3d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String)[pri:3, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:28 IST" name="verifyLogin" data-provider="existingData" finished-at="2026-05-06T17:49:32 IST" duration-ms="4350" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,19 +257,31 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Logintest@229f66ed]" started-at="2026-04-29T10:43:44 IST" name="tearDown" finished-at="2026-04-29T10:43:45 IST" duration-ms="260" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:32 IST" name="tearDown" finished-at="2026-05-06T17:49:32 IST" duration-ms="284" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Logintest@229f66ed]" started-at="2026-04-29T10:43:45 IST" name="setUp" finished-at="2026-04-29T10:43:51 IST" duration-ms="6702" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyDeleteAccount(java.lang.String,java.lang.String)[pri:4, instance:AutomationExcercise.Logintest@229f66ed]" started-at="2026-04-29T10:43:51 IST" name="verifyDeleteAccount" data-provider="deleteAccount" finished-at="2026-04-29T10:44:08 IST" duration-ms="17126" status="FAIL">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:32 IST" name="setUp" finished-at="2026-05-06T17:49:35 IST" duration-ms="2735" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Rachana20218@gmail.com]]>
+                <![CDATA[public void AutomationExcercise.Logintest.verifyDeleteAccount(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@64faf3d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyDeleteAccount(java.lang.String,java.lang.String)[pri:4, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:35 IST" name="verifyDeleteAccount" data-provider="deleteAccount" finished-at="2026-05-06T17:49:40 IST" duration-ms="5379" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rachana2037@gmail.com]]>
               </value>
             </param>
             <param index="1">
@@ -81,74 +290,34 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/delete_account']"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\R9224560\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63205}, goog:processID: 7028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63205/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e42700e7e29bb40931ae5b3c55e7ca1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/delete_account']"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\R9224560\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63205}, goog:processID: 7028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63205/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e42700e7e29bb40931ae5b3c55e7ca1
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-at AutomationExcercise.Basepage.elementToBeClickable(Basepage.java:28)
-at AutomationExcercise.Loginpage.checkDeleteAccount(Loginpage.java:189)
-at AutomationExcercise.Logintest.verifyDeleteAccount(Logintest.java:86)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDeleteAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Logintest@229f66ed]" started-at="2026-04-29T10:44:08 IST" name="tearDown" finished-at="2026-04-29T10:44:10 IST" duration-ms="2015" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Logintest@7d900ecf]" started-at="2026-05-06T17:49:40 IST" name="tearDown" finished-at="2026-05-06T17:49:41 IST" duration-ms="195" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- AutomationExcercise.Logintest -->
     </test> <!-- Login Smoke Tests -->
-    <test started-at="2026-04-29T10:44:10 IST" name="Home Smoke Tests" finished-at="2026-04-29T10:44:44 IST" duration-ms="33830">
+    <test started-at="2026-05-06T17:49:41 IST" name="Home Smoke Tests" finished-at="2026-05-06T17:50:11 IST" duration-ms="30010">
       <class name="AutomationExcercise.Hometest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Hometest@4e3958e7]" started-at="2026-04-29T10:44:10 IST" name="setUp" finished-at="2026-04-29T10:44:17 IST" duration-ms="6464" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Hometest@508dec2b]" started-at="2026-05-06T17:49:41 IST" name="setUp" finished-at="2026-05-06T17:49:45 IST" duration-ms="4165" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Hometest.verifyTestCasesLink(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@3f523dae]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyTestCasesLink(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Hometest@4e3958e7]" started-at="2026-04-29T10:44:17 IST" name="verifyTestCasesLink" data-provider="existingData" finished-at="2026-04-29T10:44:28 IST" duration-ms="11271" status="PASS">
+        <test-method signature="verifyTestCasesLink(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Hometest@508dec2b]" started-at="2026-05-06T17:49:45 IST" name="verifyTestCasesLink" data-provider="existingData" finished-at="2026-05-06T17:49:58 IST" duration-ms="13490" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -164,15 +333,27 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTestCasesLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Hometest@4e3958e7]" started-at="2026-04-29T10:44:28 IST" name="tearDown" finished-at="2026-04-29T10:44:28 IST" duration-ms="244" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Hometest@508dec2b]" started-at="2026-05-06T17:49:58 IST" name="tearDown" finished-at="2026-05-06T17:49:59 IST" duration-ms="655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Hometest@4e3958e7]" started-at="2026-04-29T10:44:28 IST" name="setUp" finished-at="2026-04-29T10:44:36 IST" duration-ms="7734" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Hometest@508dec2b]" started-at="2026-05-06T17:49:59 IST" name="setUp" finished-at="2026-05-06T17:50:03 IST" duration-ms="3988" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Hometest.verifyProductLink(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@3f523dae]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyProductLink(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Hometest@4e3958e7]" started-at="2026-04-29T10:44:36 IST" name="verifyProductLink" data-provider="existingData" finished-at="2026-04-29T10:44:44 IST" duration-ms="7678" status="PASS">
+        <test-method signature="verifyProductLink(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Hometest@508dec2b]" started-at="2026-05-06T17:50:03 IST" name="verifyProductLink" data-provider="existingData" finished-at="2026-05-06T17:50:10 IST" duration-ms="7444" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -188,19 +369,31 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProductLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Hometest@4e3958e7]" started-at="2026-04-29T10:44:44 IST" name="tearDown" finished-at="2026-04-29T10:44:44 IST" duration-ms="426" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Hometest@508dec2b]" started-at="2026-05-06T17:50:10 IST" name="tearDown" finished-at="2026-05-06T17:50:11 IST" duration-ms="258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- AutomationExcercise.Hometest -->
     </test> <!-- Home Smoke Tests -->
-    <test started-at="2026-04-29T10:44:44 IST" name="Product Smoke Tests" finished-at="2026-04-29T10:46:34 IST" duration-ms="109589">
+    <test started-at="2026-05-06T17:50:11 IST" name="Product Smoke Tests" finished-at="2026-05-06T17:51:51 IST" duration-ms="100725">
       <class name="AutomationExcercise.Producttest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:44:44 IST" name="setUp" finished-at="2026-04-29T10:44:50 IST" duration-ms="6026" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:50:11 IST" name="setUp" finished-at="2026-05-06T17:50:14 IST" duration-ms="3211" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Producttest.verifyAllProductsPage(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@7fe40b9f]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyAllProductsPage(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:44:50 IST" name="verifyAllProductsPage" data-provider="existingData" finished-at="2026-04-29T10:44:58 IST" duration-ms="7603" status="FAIL">
+        <test-method signature="verifyAllProductsPage(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:50:14 IST" name="verifyAllProductsPage" data-provider="existingData" finished-at="2026-05-06T17:50:20 IST" duration-ms="6411" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -213,85 +406,30 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="/products">...</a> is not clickable at point (598, 40). Other element would receive the click: <iframe id="aswift_3" name="aswift_3" style="min-height: auto !important; max-height: none !important; min-width: auto !important; max-width: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20260427/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271808&amp;client=ca-pub-1677597403311019&amp;fa=8&amp;ifi=4&amp;uci=a!4" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CM292-ymkpQDFQVpnQkdYlw8bw" data-load-complete="true"></iframe>
-  (Session info: chrome=147.0.7727.56)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d2c8581912a54ce40c8b3d659ee4fd0, clickElement {id=f.E31938D9D9F8196FC2E75F6EE1495CC8.d.E7E6E53F1120E6C36A88EED83462ACCF.e.140}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\R9224560\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 36344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2d2c8581912a54ce40c8b3d659ee4fd0)] -> css selector: a[href='/products']]
-Session ID: 2d2c8581912a54ce40c8b3d659ee4fd0]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="/products">...</a> is not clickable at point (598, 40). Other element would receive the click: <iframe id="aswift_3" name="aswift_3" style="min-height: auto !important; max-height: none !important; min-width: auto !important; max-width: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20260427/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271808&amp;client=ca-pub-1677597403311019&amp;fa=8&amp;ifi=4&amp;uci=a!4" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CM292-ymkpQDFQVpnQkdYlw8bw" data-load-complete="true"></iframe>
-  (Session info: chrome=147.0.7727.56)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2d2c8581912a54ce40c8b3d659ee4fd0, clickElement {id=f.E31938D9D9F8196FC2E75F6EE1495CC8.d.E7E6E53F1120E6C36A88EED83462ACCF.e.140}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\R9224560\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63755}, goog:processID: 36344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63755/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2d2c8581912a54ce40c8b3d659ee4fd0)] -> css selector: a[href='/products']]
-Session ID: 2d2c8581912a54ce40c8b3d659ee4fd0
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
-at AutomationExcercise.Homepage.getProducts(Homepage.java:36)
-at AutomationExcercise.Productpage.verifyProductPage(Productpage.java:57)
-at AutomationExcercise.Producttest.verifyAllProductsPage(Producttest.java:19)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAllProductsPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:44:58 IST" name="tearDown" finished-at="2026-04-29T10:44:58 IST" duration-ms="254" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:50:20 IST" name="tearDown" finished-at="2026-05-06T17:50:21 IST" duration-ms="229" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:44:58 IST" name="setUp" finished-at="2026-04-29T10:45:06 IST" duration-ms="7613" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:50:21 IST" name="setUp" finished-at="2026-05-06T17:50:24 IST" duration-ms="3608" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Producttest.searchProduct(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@7fe40b9f]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchProduct(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:45:06 IST" name="searchProduct" data-provider="existingData" finished-at="2026-04-29T10:45:26 IST" duration-ms="19774" status="PASS">
+        <test-method signature="searchProduct(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:50:24 IST" name="searchProduct" data-provider="existingData" finished-at="2026-05-06T17:50:34 IST" duration-ms="10119" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -307,15 +445,27 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:45:26 IST" name="tearDown" finished-at="2026-04-29T10:45:26 IST" duration-ms="633" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:50:34 IST" name="tearDown" finished-at="2026-05-06T17:50:35 IST" duration-ms="390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:45:26 IST" name="setUp" finished-at="2026-04-29T10:45:33 IST" duration-ms="6911" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:50:35 IST" name="setUp" finished-at="2026-05-06T17:50:39 IST" duration-ms="4545" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Producttest.verifyClickProductByName(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@7fe40b9f]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyClickProductByName(java.lang.String,java.lang.String)[pri:2, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:45:33 IST" name="verifyClickProductByName" data-provider="existingData" finished-at="2026-04-29T10:45:55 IST" duration-ms="21994" status="PASS">
+        <test-method signature="verifyClickProductByName(java.lang.String,java.lang.String)[pri:2, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:50:39 IST" name="verifyClickProductByName" data-provider="existingData" finished-at="2026-05-06T17:51:13 IST" duration-ms="33399" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -331,15 +481,27 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyClickProductByName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:45:55 IST" name="tearDown" finished-at="2026-04-29T10:45:56 IST" duration-ms="396" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:51:13 IST" name="tearDown" finished-at="2026-05-06T17:51:13 IST" duration-ms="212" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:45:56 IST" name="setUp" finished-at="2026-04-29T10:46:04 IST" duration-ms="8214" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:51:13 IST" name="setUp" finished-at="2026-05-06T17:51:16 IST" duration-ms="3307" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Producttest.verifyProductAddedToCart(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@7fe40b9f]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyProductAddedToCart(java.lang.String,java.lang.String)[pri:3, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:46:04 IST" name="verifyProductAddedToCart" data-provider="existingData" finished-at="2026-04-29T10:46:33 IST" duration-ms="29739" status="PASS">
+        <test-method signature="verifyProductAddedToCart(java.lang.String,java.lang.String)[pri:3, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:51:16 IST" name="verifyProductAddedToCart" data-provider="existingData" finished-at="2026-05-06T17:51:51 IST" duration-ms="34996" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -355,19 +517,31 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProductAddedToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Producttest@63070bab]" started-at="2026-04-29T10:46:33 IST" name="tearDown" finished-at="2026-04-29T10:46:34 IST" duration-ms="391" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Producttest@7486b455]" started-at="2026-05-06T17:51:51 IST" name="tearDown" finished-at="2026-05-06T17:51:51 IST" duration-ms="279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- AutomationExcercise.Producttest -->
     </test> <!-- Product Smoke Tests -->
-    <test started-at="2026-04-29T10:46:34 IST" name="Cart Smoke Tests" finished-at="2026-04-29T10:47:49 IST" duration-ms="74950">
+    <test started-at="2026-05-06T17:51:51 IST" name="Cart Smoke Tests" finished-at="2026-05-06T17:52:44 IST" duration-ms="53056">
       <class name="AutomationExcercise.Carttest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Carttest@10d68fcd]" started-at="2026-04-29T10:46:34 IST" name="setUp" finished-at="2026-04-29T10:46:43 IST" duration-ms="9072" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Carttest@49c90a9c]" started-at="2026-05-06T17:51:51 IST" name="setUp" finished-at="2026-05-06T17:51:55 IST" duration-ms="3867" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Carttest.verifyCartDescription(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@1f41f259]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCartDescription(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Carttest@10d68fcd]" started-at="2026-04-29T10:46:43 IST" name="verifyCartDescription" data-provider="existingData" finished-at="2026-04-29T10:47:08 IST" duration-ms="25358" status="FAIL">
+        <test-method signature="verifyCartDescription(java.lang.String,java.lang.String)[pri:0, instance:AutomationExcercise.Carttest@49c90a9c]" started-at="2026-05-06T17:51:55 IST" name="verifyCartDescription" data-provider="existingData" finished-at="2026-05-06T17:51:59 IST" duration-ms="3776" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -380,27 +554,57 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[expected:<6> but was:<2>]]>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dbeab194c0ec013161efc543c875b340, clickElement {id=f.4FE758EEF24834DF6DE77262EC58F256.d.DD75739BCF8AE3CF6DBE4D35FEBCBDE8.e.86}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\RACHAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58145}, goog:processID: 21464, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58145/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (dbeab194c0ec013161efc543c875b340)] -> css selector: a[href='/products']]
+Session ID: dbeab194c0ec013161efc543c875b340]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected:<6> but was:<2>
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:125)
-at AutomationExcercise.Carttest.verifyCartDescription(Carttest.java:24)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [dbeab194c0ec013161efc543c875b340, clickElement {id=f.4FE758EEF24834DF6DE77262EC58F256.d.DD75739BCF8AE3CF6DBE4D35FEBCBDE8.e.86}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\RACHAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58145}, goog:processID: 21464, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58145/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (dbeab194c0ec013161efc543c875b340)] -> css selector: a[href='/products']]
+Session ID: dbeab194c0ec013161efc543c875b340
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at AutomationExcercise.Homepage.getProducts(Homepage.java:36)
+at AutomationExcercise.Carttest.verifyCartDescription(Carttest.java:18)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
 at org.testng.TestRunner.run(TestRunner.java:616)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
 at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
@@ -417,19 +621,31 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCartDescription -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Carttest@10d68fcd]" started-at="2026-04-29T10:47:08 IST" name="tearDown" finished-at="2026-04-29T10:47:09 IST" duration-ms="529" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Carttest@49c90a9c]" started-at="2026-05-06T17:51:59 IST" name="tearDown" finished-at="2026-05-06T17:51:59 IST" duration-ms="169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:AutomationExcercise.Carttest@10d68fcd]" started-at="2026-04-29T10:47:09 IST" name="setUp" finished-at="2026-04-29T10:47:16 IST" duration-ms="6723" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:AutomationExcercise.Carttest@49c90a9c]" started-at="2026-05-06T17:51:59 IST" name="setUp" finished-at="2026-05-06T17:52:03 IST" duration-ms="3597" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AutomationExcercise.Carttest.verifyCheckoutProcess(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@1f41f259]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCheckoutProcess(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Carttest@10d68fcd]" started-at="2026-04-29T10:47:16 IST" name="verifyCheckoutProcess" data-provider="existingData" finished-at="2026-04-29T10:47:48 IST" duration-ms="32931" status="PASS">
+        <test-method signature="verifyCheckoutProcess(java.lang.String,java.lang.String)[pri:1, instance:AutomationExcercise.Carttest@49c90a9c]" started-at="2026-05-06T17:52:03 IST" name="verifyCheckoutProcess" data-provider="existingData" finished-at="2026-05-06T17:52:44 IST" duration-ms="40971" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -442,10 +658,77 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"input[data-qa='name-on-card']"}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [11a485278b69ff98fdeeeae6145c6859, findElement {using=css selector, value=input[data-qa='name-on-card']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\RACHAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60309}, goog:processID: 13572, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60309/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 11a485278b69ff98fdeeeae6145c6859]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[data-qa='name-on-card']"}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [11a485278b69ff98fdeeeae6145c6859, findElement {using=css selector, value=input[data-qa='name-on-card']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\RACHAN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60309}, goog:processID: 13572, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60309/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 11a485278b69ff98fdeeeae6145c6859
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
+at AutomationExcercise.Cartpage.checkProceedToCheckout(Cartpage.java:74)
+at AutomationExcercise.Carttest.verifyCheckoutProcess(Carttest.java:37)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCheckoutProcess -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Carttest@10d68fcd]" started-at="2026-04-29T10:47:49 IST" name="tearDown" finished-at="2026-04-29T10:47:49 IST" duration-ms="321" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AutomationExcercise.Carttest@49c90a9c]" started-at="2026-05-06T17:52:44 IST" name="tearDown" finished-at="2026-05-06T17:52:44 IST" duration-ms="253" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

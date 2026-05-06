@@ -1,5 +1,6 @@
 package AutomationExcercise;
 
+import java.lang.reflect.Method;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -8,9 +9,17 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import org.testng.ITestContext;
+
+import Utils.ExtentManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Basetest {
+
+	ExtentReports extent = ExtentManager.getInstance();
+	ExtentTest test;
 
     protected WebDriver driver;       // MUST be protected
     protected Loginpage loginpage;     // accessible to child tests
@@ -26,7 +35,7 @@ public class Basetest {
 	String expectedorderplacedmessage = "ORDER PLACED!";
 
     @BeforeMethod(alwaysRun = true)
-    public void setUp() {
+    public void setUp(Method method,ITestContext context) {
 
         WebDriverManager.chromedriver().setup();
 
@@ -42,11 +51,18 @@ public class Basetest {
 
         // ✅ Initialize page object AFTER driver
         loginpage = new Loginpage(driver);
+        
+        test = extent.createTest(method.getName());
+        
+        context.setAttribute("WebDriver", driver);
     }
+
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         if (driver != null) {
+        	extent.flush();
+
             driver.quit();
         }
     }

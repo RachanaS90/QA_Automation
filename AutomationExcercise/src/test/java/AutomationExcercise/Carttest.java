@@ -1,10 +1,10 @@
 package AutomationExcercise;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
+@Listeners(Utils.Listeners.class)
 public class Carttest extends Basetest{
 
 	Cartpage cartpage;
@@ -31,6 +31,7 @@ public class Carttest extends Basetest{
 		homepage = loginpage.checkLogin(email, password);
 		productpage  = homepage.getProducts();
 		productpage.clickProductByName("Men Tshirt"); 
+		
 		productpage.addProductByName();
 		cartpage = productpage.clickViewCartLink();
 		String actualorderplacemessage = cartpage.checkProceedToCheckout();

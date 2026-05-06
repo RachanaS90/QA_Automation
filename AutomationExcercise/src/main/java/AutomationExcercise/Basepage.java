@@ -20,14 +20,14 @@ public class Basepage {
 	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		wait = new WebDriverWait(driver, Duration.ofMillis(10000));
+		wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 	}
 	
 	public WebElement elementToBeClickable(WebElement ele)
 	{
 		return wait.until(ExpectedConditions.elementToBeClickable(ele));
 	}
-	
+
 	public WebElement visibilityOf(WebElement ele)
 	{
 		return wait.until(ExpectedConditions.visibilityOf(ele));

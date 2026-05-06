@@ -147,7 +147,7 @@ public class Loginpage extends Basepage {
 	
 	public void selectCheckbox()
 	{
-		newslettercheckbox.click();
+		elementToBeClickable(newslettercheckbox).click();
 		optincheckbox.click();
 	}
 	
@@ -188,7 +188,7 @@ public class Loginpage extends Basepage {
 		 checkLogin(email, password);
 		 elementToBeClickable(deleteaccount_link).click();
 		 
-		 return deleteaccountmessage.getText();
+		 return visibilityOf(deleteaccountmessage).getText();
 	}
 	
 	public String checkExistingLogin(String email, String password)

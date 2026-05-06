@@ -1,10 +1,10 @@
 package AutomationExcercise;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
-import org.testng.Assert;
 
-
+@Listeners(Utils.Listeners.class)
 public class Producttest extends Basetest{
 
 	Productpage productpage;

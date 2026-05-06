@@ -1,7 +1,9 @@
 package AutomationExcercise;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(Utils.Listeners.class)
 public class Hometest extends Basetest{
 	
 	Homepage homepage;

@@ -3,22 +3,24 @@ package AutomationExcercise;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 
 
+@Listeners(Utils.Listeners.class)
 public class Logintest extends Basetest{
 
 	
 	@DataProvider(name = "signupData")
 	public Object[][] signupData() {
 	    return new Object[][] {
-	        {"Rachana Sinha", "Rachana2033@gmail.com","test@123","10", "April", "1980", "India", "ACCOUNT CREATED!"}
+	        {"Rachana Sinha", "Rachana2037@gmail.com","test@123","10", "April", "1980", "India", "ACCOUNT CREATED!"}
 	    };	
 	}
 	
 	@DataProvider(name ="existingSignupData")
 	public Object[][] existingSignupData(){
 		return new Object[][] {
-			{"Rachana Sinha","Rachana2033@gmail.com"}
+			{"Rachana Sinha","Rachana2036@gmail.com"}
 		};
 	}
 	
@@ -32,7 +34,7 @@ public class Logintest extends Basetest{
 	@DataProvider(name ="deleteAccount")
 	public Object[][] deleteAccount(){
 		return new Object[][] {
-			{"Rachana2033@gmail.com","test@123"}
+			{"Rachana2037@gmail.com","test@123"}
 		};
 	}
 	
@@ -65,7 +67,7 @@ public class Logintest extends Basetest{
 		AssertJUnit.assertEquals(actualmessage, expectedMessage);
 	}
 	
-	@Test(groups={"regression"}, dataProvider = "existingSignupData", priority=2)
+	@Test(groups={"smoke","regression"}, dataProvider = "existingSignupData", priority=2)
 	public void verifyExistingEmail(String username, String email)
 	{
 		loginpage.signUp(username,email);

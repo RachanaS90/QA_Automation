@@ -27,8 +27,8 @@ public class Homepage extends Basepage{
 	
 	public String getTestCases()
 	{
-		testcases_link.click();
-		return testcase_title.getText();
+		elementToBeClickable(testcases_link).click();
+		return visibilityOf(testcase_title).getText();
 	}
 	
 	public Productpage getProducts()
