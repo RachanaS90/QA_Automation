@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Smoke Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Login Smoke Tests(failed)">
+  <test thread-count="5" name="Product Smoke Tests(failed)">
     <groups>
       <run>
         <include name="smoke"/>
       </run>
     </groups>
     <classes>
-      <class name="AutomationExcercise.Logintest">
+      <class name="AutomationExcercise.Producttest">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="verifyExistingEmail" invocation-numbers="0"/>
+          <include name="searchProduct" invocation-numbers="0"/>
+          <include name="verifyAllProductsPage" invocation-numbers="0"/>
         </methods>
-      </class> <!-- AutomationExcercise.Logintest -->
+      </class> <!-- AutomationExcercise.Producttest -->
     </classes>
-  </test> <!-- Login Smoke Tests(failed) -->
+  </test> <!-- Product Smoke Tests(failed) -->
   <test thread-count="5" name="Cart Smoke Tests(failed)">
     <groups>
       <run>

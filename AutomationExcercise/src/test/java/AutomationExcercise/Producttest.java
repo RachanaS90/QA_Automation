@@ -2,7 +2,7 @@ package AutomationExcercise;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 
 @Listeners(Utils.Listeners.class)
 public class Producttest extends Basetest{
@@ -17,7 +17,7 @@ public class Producttest extends Basetest{
 		homepage = loginpage.checkLogin(email, password);
 		productpage  = homepage.getProducts();
 		String actualproducttitle = productpage.verifyProductPage();
-		AssertJUnit.assertTrue(actualproducttitle.contains(expectedproducttext));
+		Assert.assertTrue(actualproducttitle.contains(expectedproducttext));
 	}
 	
 	@Test(groups={"smoke", "regression"}, dataProvider="existingData",dataProviderClass = Logintest.class,priority=1)
@@ -27,8 +27,8 @@ public class Producttest extends Basetest{
 		productpage  = homepage.getProducts();
 	    productpage.searchProduct();
 	    String actualsearchedproducttitle = productpage.product_title.getText();
-	    AssertJUnit.assertEquals(actualsearchedproducttitle, expectedsearchproducttitle);
-		AssertJUnit.assertTrue(productpage.verifySearchedResult("TShirt"));
+	    Assert.assertEquals(actualsearchedproducttitle, expectedsearchproducttitle);
+		Assert.assertTrue(productpage.verifySearchedResult("TShirt"));
 	}
 	
 	@Test(groups={"smoke", "regression"},dataProvider="existingData",dataProviderClass = Logintest.class,priority=2)
@@ -45,7 +45,7 @@ public class Producttest extends Basetest{
 		productpage  = homepage.getProducts();
 		productpage.clickProductByName("Men Tshirt"); 
 		String actualmessage = productpage.addProductByName();
-		AssertJUnit.assertTrue(actualmessage.contains("Added!"));
+		Assert.assertTrue(actualmessage.contains("Added!"));
 	}
 	
 	

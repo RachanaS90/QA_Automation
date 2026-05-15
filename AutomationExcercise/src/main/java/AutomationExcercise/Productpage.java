@@ -122,9 +122,9 @@ public class Productpage extends Homepage {
 	}
 
 	public String addProductByName() {
-		product_qty.clear();
-		product_qty.sendKeys("2");
-		productdetails_addtocartbtn.click();
+		visibilityOf(product_qty).clear();
+		visibilityOf(product_qty).sendKeys("2");
+		elementToBeClickable(productdetails_addtocartbtn).click();
 		return visibilityOf(success_product_added).getText();
 	}
 	

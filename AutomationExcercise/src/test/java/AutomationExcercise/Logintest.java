@@ -1,7 +1,7 @@
 package AutomationExcercise;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
@@ -20,7 +20,7 @@ public class Logintest extends Basetest{
 	@DataProvider(name ="existingSignupData")
 	public Object[][] existingSignupData(){
 		return new Object[][] {
-			{"Rachana Sinha","Rachana2036@gmail.com"}
+			{"Rachana Sinha","Rachana2037@gmail.com"}
 		};
 	}
 	
@@ -50,7 +50,7 @@ public class Logintest extends Basetest{
 	public void verifyHomepage()
 	{
 		String actualtitle = loginpage.getHomepageTitle();
-		AssertJUnit.assertEquals(actualtitle, expectedtitle);
+		Assert.assertEquals(actualtitle, expectedtitle);
 	}
 	
 	@Test(groups={"smoke", "regression"}, dataProvider = "signupData", priority=1)
@@ -58,21 +58,21 @@ public class Logintest extends Basetest{
 	{
 		loginpage.signUp(username,email);
 		loginpage.selectCheckbox();
-		AssertJUnit.assertTrue(loginpage.newslettercheckbox.isSelected());
+		Assert.assertTrue(loginpage.newslettercheckbox.isSelected());
 		loginpage.selectDay(day);
 		loginpage.selectMonth(month);
 		loginpage.selectYear(year);
 		loginpage.selectCountry(country);
 		String actualmessage = loginpage.addDetails(password);
-		AssertJUnit.assertEquals(actualmessage, expectedMessage);
+		Assert.assertEquals(actualmessage, expectedMessage);
 	}
 	
-	@Test(groups={"smoke","regression"}, dataProvider = "existingSignupData", priority=2)
+	@Test(groups={"smoke","regression"}, dataProvider = "existingSignupData", dependsOnMethods= {"verifyUserSignUp"})
 	public void verifyExistingEmail(String username, String email)
 	{
 		loginpage.signUp(username,email);
 		String errormesage = loginpage.addExistingEmail();
-		AssertJUnit.assertEquals(errormesage, expectederrormessage);
+		Assert.assertEquals(errormesage, expectederrormessage);
 	}
 	
 
@@ -86,14 +86,14 @@ public class Logintest extends Basetest{
 	public void verifyDeleteAccount(String email, String password)
 	{
 		String actualdeleteaccountmessage = loginpage.checkDeleteAccount(email,password);
-		AssertJUnit.assertEquals(actualdeleteaccountmessage, expecteddeletemessage);
+		Assert.assertEquals(actualdeleteaccountmessage, expecteddeletemessage);
 	}
 	
 	@Test(groups = {"regression"}, dataProvider="invalidLoginData", priority=5)
 	public void verifyinvalidLogin(String invalidemail, String invalidpassword)
 	{
 		String actualinvaliderrormessage = loginpage.checkExistingLogin(invalidemail, invalidpassword);
-		AssertJUnit.assertEquals(actualinvaliderrormessage, expectedinvaliderrormessage);
+		Assert.assertEquals(actualinvaliderrormessage, expectedinvaliderrormessage);
 	}
 	
 }
