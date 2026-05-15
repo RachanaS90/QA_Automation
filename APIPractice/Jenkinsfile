@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven_3.9'
+        jdk 'JDK_26'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'RachanaNew', url: 'https://github.com/RachanaS90/QA_Automation.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+
+        stage('Run API Tests') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        
+        stage('Clean Reports') {
+    steps {
+        sh 'rm -rf target/allure-results target/allure-report'
+    }
+}
+
+
+        stage('Allure Report') {
+            steps {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    results: [[path: 'target/allure-results']]
+                ])
+            }
+        }
+    }
+}
